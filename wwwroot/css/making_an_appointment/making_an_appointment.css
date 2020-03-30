@@ -26,6 +26,18 @@
     margin-top: 10px;
 }
 
+@media (min-width: 1921px) {
+    .making_an_appointment_button {
+        height: calc(60px + (100vw - 1921px) * (80 - 60) / (2560 - 1921))
+    }
+}
+
+@media (min-width: 2561px) {
+    .making_an_appointment_button {
+        height: 80px;
+    }
+}
+
 .making_an_appointment_button_mobile {
     background-color: #587D5F;
     border: none;
