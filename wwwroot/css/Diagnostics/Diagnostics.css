@@ -1,0 +1,36 @@
+﻿.category_text {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2A2A2A;
+}
+
+@media (max-width: 768px) {
+    .big_slider_div_text_page {
+        display: none;
+    }
+}
+
+.big_text_div_text_page {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .big_text_div_text_page {
+        display: none;
+    }
+}
+
+.small_text_div_text_page {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 769px) {
+    .small_text_div_text_page {
+        display: none;
+    }
+}

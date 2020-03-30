@@ -1,0 +1,401 @@
+﻿@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .making_an_appointment_button {
+        font-size: 15px;
+        margin-left: 57px;
+    }
+}
+
+
+.making_an_appointment_button {
+    background-color: #587D5F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+
+    line-height: 19px;
+    width: calc(258px + (100vw - 1440px)*0.0875) !important;
+    height: 60px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.making_an_appointment_button_mobile {
+    background-color: #587D5F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+
+    line-height: 19px;
+    max-width: 335px;
+    height: 50px;
+    vertical-align: top;
+    margin: auto;
+}
+
+@media (max-width: 297px) {
+    .making_an_appointment_button_mobile {
+        background-color: #587D5F;
+        border: none;
+        color: white;
+        padding-top: 15px;
+        padding-left: 31px;
+        padding-right: 31px;
+        padding-bottom: 31px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        cursor: pointer;
+
+        line-height: 19px;
+        max-width: 335px;
+        height: 61px;
+        vertical-align: top;
+        margin: auto;
+    }
+}
+
+.making_an_appointment_button_accept {
+    background-color: #587D5F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+@media (max-width: 599px) {
+    .making_an_appointment_button_accept {
+        background-color: #587D5F;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 499px) {
+    .making_an_appointment_button_accept {
+        background-color: #587D5F;
+        border: none;
+        color: white;
+        padding: 8px 0px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        margin-top: 0px;
+    }
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    vertical-align: middle;
+}
+
+@media (max-width: 599px) {
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 40px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+        vertical-align: middle;
+    }
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    left: calc(50vw - 263.5px);
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 30px;
+    border: 1px solid #888;
+    width: 527px;
+    padding-bottom: 40px;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    
+    border-radius: 0;
+    color: #9E9E9C;
+}
+
+
+@media (max-width: 599px) {
+    .modal-content {
+        background-color: #fefefe;
+        position: absolute;
+        left: calc(50vw - 230px);
+        padding-left: 35px;
+        padding-right: 25px;
+        padding-top: 25px;
+        border: 1px solid #888;
+        width: 460px;
+        height: 335px;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+
+        border-radius: 0;
+        color: #9E9E9C;
+    }
+}
+
+@media (max-width: 499px) {
+    .modal-content {
+        background-color: #fefefe;
+        position: absolute;
+        left: calc(50vw - 180px);
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 25px;
+        border: 1px solid #888;
+        width: 360px;
+        height: 310px;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+
+        border-radius: 0;
+        color: #9E9E9C;
+    }
+}
+
+
+@media (max-width: 404px) {
+    .modal-content {
+        background-color: #fefefe;
+        position: absolute;
+        left: calc(50vw - 150px);
+        padding-left: 20px;
+        padding-right: 15px;
+        padding-top: 25px;
+        border: 1px solid #888;
+        width: 300px;
+        top: 0px;
+        height: 405px;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 150%;
+        border-radius: 0;
+        color: #9E9E9C;
+    }
+}
+
+
+
+
+
+/* The Close Button */
+.close_btn {
+    color: black;
+    font-size: 44px;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+@media (max-width: 559px) {
+    .close_btn {
+        color: black;
+        font-size: 30px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+.close_btn:hover,
+.close_btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.registry_phone_number {
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 19px;
+    margin-right: 17px;
+}
+
+@media (min-width: 1440px) {
+    .registry_phone_number {
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 19px;
+        margin-right: calc(17px + (100vw - 1440px) / 16 );
+    }
+}
+
+@media (max-width: 1439.2px) {
+    .registry_phone_number {
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 19px;
+        margin-right: 17px;
+    }
+}
+
+@@media (max-width: 1365.2px) {
+    .registry_phone_number {
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 19px;
+        margin-right: 17px;
+        color: black;
+    }
+}
+
+
+
+.h1_modal {
+    margin-top: 10px;
+    font-size: 24px;
+    color: black;
+}
+
+.h2_modal {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 559px) {
+    .h1_modal {
+        font-size: 20px;
+    }
+
+    .h2_modal {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 459px) {
+    .h1_modal {
+        font-size: 18px;
+    }
+
+    .h2_modal {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+}
+
+
+.telephone_number_in_modal {
+    border: none;
+    width: 381.5px;
+    border-bottom: 2px solid #9E9E9C;
+    margin-top: 30px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+@media(max-width: 599px) {
+    .telephone_number_in_modal {
+        border: none;
+        width: 381.5px;
+        margin-top: 10px;
+        border-bottom: 2px solid #9E9E9C;
+    }
+}
+
+
+
+
+.input_modal {
+    border: none;
+    width: 381.5px;
+    border-bottom: 2px solid #9E9E9C;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+@media(max-width: 499px) {
+    .input_modal {
+        width: 310px;
+    }
+
+    .telephone_number_in_modal {
+        width: 310px;
+    }
+}
+
+
+@media(max-width: 404px) {
+    .input_modal {
+        width: 265px;
+    }
+
+    .telephone_number_in_modal {
+        width: 265px;
+    }
+}
+
+#close_menu_btn_desktop {
+    display: none;
+}

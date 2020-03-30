@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/css/w3.css">
+
+    <title>КММЦ Святителя Луки</title>
+
+    <link rel="stylesheet" href="~/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <link href="~/css/fonts/Lato/latofonts.css" rel="stylesheet" type="text/css">
+    <link href="~/css/fonts/Lato/latostyle.css" rel="stylesheet" type="text/css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/lib/jquery/dist/jquery.dataTables.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <link rel="stylesheet" href="~/css/making_an_appointment/making_an_appointment.css" />
+    <link rel="stylesheet" href="~/css/making_an_appointment_form/making_an_appointment_form.css" />
+    <link rel="stylesheet" href="~/css/main_menu/main_menu.css" />
+    <link rel="stylesheet" href="~/css/footer/footer.css" />
+    <link rel="stylesheet" href="~/css/rectangle_on_background/rectangle_on_background.css" />
+    <link rel="stylesheet" href="~/css/Index_Page/slider.css" />
+    <link rel="stylesheet" href="~/css/submenu/submenu.css" />
+    <link rel="stylesheet" href="~/css/general/general.css" />
+
+    <script src="~/js/Layout/main_menu/main_menu.js"></script>
+    <script src="~/js/Layout/making_an_appointment_modal/making_an_appointment_modal.js"></script>
+
+    <script src="~/js/Layout/footer/footer.js"></script>
+
+    <!-- ************************************* -->
+    <script src="~/js/Layout/service_functions_(others)/service_functions_(others).js"></script>
+    <!-- ************************************* -->
+
+</head>
+<body style="background-color: #E5E5E5;">
+    <style>
+        .h1_body_content {
+            font-family: LatoWeb;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: #2A2A2A;
+        }
+    </style>
+
+    <!-- The Modal -->
+    <div id="making_an_appointment_Modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="close_btn" style="color: black;">&times;</div>
+            <p class="h1_modal">ЗАПИСАТЬСЯ НА ПРИЕМ</p>
+            <p class="h2_modal">ЗАПОЛНИТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ</p>
+            <input type="text" placeholder="Ваше имя*" required class="input_modal" />
+            <input type="text" placeholder="Ваш номер телефона*" required class="telephone_number_in_modal" />
+            
+            <select class="input_in_making_an_appointment_form" style="margin-top: 25px;">
+                <option value="" disabled selected>
+                    К какому специалисту Вы хотите попасть на прием?
+                </option>
+                <option>
+                    Врач-терапевт
+                </option>
+                <option>
+                    Врач-кардиолог
+                </option>
+                <option>
+                    Врач-невролог
+                </option>
+                <option>
+                    Врач-хирург
+                </option>
+                <option>
+                    Врач-травматолог
+                </option>
+                <option>
+                    Врач-офтальмолог
+                </option>
+                <option>
+                    Врач-уролог
+                </option>
+                <option>
+                    Врач-инфекционист
+                </option>
+                <option>
+                    Врач-гастроэнтеролог
+                </option>
+                <option>
+                    Врач-эндокринолог
+                </option>
+                <option>
+                    Отоларинголог
+                </option>
+                <option>
+                    Дерматовенеролог
+                </option>
+                <option>
+                    Акушер-гинеколог
+                </option>
+                <option>
+                    Врач-аллерголог
+                </option>
+                <option>
+                    Врач-пульмонолог
+                </option>
+                <option>
+                    Врач-андолог
+                </option>
+                <option>
+                    Врач-ревматолог
+                </option>
+                <option>
+                    Врач-стоматолог
+                </option>
+            </select>
+
+            <select class="input_in_making_an_appointment_form" style="margin-top: 30px;">
+                <option value="" disabled selected>
+                    Выберите вид услуги
+                </option>
+                <option>
+                    Консультация первичная
+                </option>
+                <option>
+                    Консультация повторная
+                </option>
+                <option>
+                    УЗИ
+                </option>
+                <option>
+                    Рентгенография
+                </option>
+                <option>
+                    Компьютерная томография
+                </option>
+                <option>
+                    Флюрография
+                </option>
+                <option>
+                    Лабораторные исследования
+                </option>
+                <option>
+                    Эндоскопия
+                </option>
+                <option>
+                    Другое
+                </option>
+            </select>
+
+            <br>
+            <input type="button" id="send_making_an_appointment_form" value="ОТПРАВИТЬ" class="making_an_appointment_button_accept" />
+        </div>
+    </div>
+
+
+
+
+    <header>
+        <nav id="main_menu" class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3">
+            <div class="container">
+                <img src="~/images/logo/LOGOTIP_KMMTs.svg" id="KMMTs_logo" class="KMMTs_logo" />
+                <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo" class="kfu_logo" />
+
+                <button id="navbar-toggler" onclick="Show_Hide_Body()" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
+                    <svg id="close_menu_button_mobile" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="close_menu_button_mobile additional_tools_on_index_page_mobile">
+                        <circle cx="25" cy="25" r="24" stroke="#2A2A2A" stroke-width="2" />
+                        <path d="M26.4556 25.014L34.6753 16.83C35.0694 16.4395 35.0694 15.8073 34.6753 15.4178C34.2823 15.0272 33.6438 15.0272 33.2507 15.4178L25.038 23.5947L16.7494 15.2959C16.3563 14.9014 15.7178 14.9014 15.3247 15.2959C14.9317 15.6914 14.9317 16.3316 15.3247 16.7261L23.6073 25.019L15.2948 33.2948C14.9017 33.6854 14.9017 34.3176 15.2948 34.7071C15.6879 35.0976 16.3264 35.0976 16.7194 34.7071L25.0249 26.4382L33.2806 34.7041C33.6736 35.0986 34.3121 35.0986 34.7052 34.7041C35.0983 34.3086 35.0983 33.6684 34.7052 33.2739L26.4556 25.014Z" fill="#2A2A2A" />
+                    </svg>
+                </button>
+
+                <div id="additional_tools_on_index_page" class="additional_tools_on_index_page additional_tools_on_index_page_low_resolution">
+                    <img src="~/images/logo/search_icon.svg" class="search_icon white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/search_icon.svg" class="search_icon black_logo_in_main_menu" />
+                    <div style="display: inline-block;" class="language">RU</div>
+                    <img src="~/images/logo/down_arrow.svg" class="down_arrow white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/down_arrow.svg" class="down_arrow black_logo_in_main_menu" />
+                    <img src="~/images/logo/phone_icon.svg" class="phone_icon white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/phone_icon.svg" class="phone_icon black_logo_in_main_menu" />
+                    <div class="registry_phone_number">+7 (3652) 55 47 46</div>
+
+                    <button id="making_an_appointment_button" onclick="Hide_Fixed_Main_Menu()" class="making_an_appointment_button">ЗАПИСАТЬСЯ НА ПРИЕМ</button>
+                </div>
+
+
+                <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo_mobile" class="kfu_logo_mobile" />
+
+                <div id="navbar-collapse" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item additional_tools_on_index_page_mobile" style="margin-bottom: 25px;">
+                            <table style="width: 100%;">
+                                <thead></thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #2A2A2A;">
+                                        <td>
+                                            <input type="text" class="input_search" value="Поиск по сайту" />
+                                        </td>
+                                        <td align="right" style="width: 15px;">
+                                            <a href="">
+                                                <img src="~/images/logo/green/search_icon_black.svg" class="search_icon_black" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+
+                        <li class="navbar-nav flex-grow-1" id="close_menu_btn_desktop">
+                            <div class="close_btn" style="color: black;" onclick="Show_Hide_Body()">&times;</div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="dropdown-toggle main_menu_item main_menu_item_a dropdown_button" onclick="Show_Hide_Dropdown_About()" style="padding-right: 0px; padding-left: 0px; padding-top: 8px; padding-bottom: 0px;">
+                                О КЛИНИКЕ
+
+                                <img src="~/images/logo/green/down_arrow_green.svg" class="down_arrow_in_mobile_menu" style="margin-top: -3px; width: 10px;" />
+                            </a>
+
+                            <div id="dropdown_menu_About" class="dropdown-menu dropdown_menu_custom">
+                                <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="About" asp-action="Rector" style="padding-right: 10px;">Ректор</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="About" asp-action="Director" style="padding-right: 10px;">Директор</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="About" asp-action="License" style="padding-right: 10px;">Лицензия</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="About" asp-action="History" style="padding-right: 10px;">История</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="About" asp-action="Structure" style="padding-right: 10px;">Структура центра</a>
+                                <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                            </div>
+
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark main_menu_item main_menu_item_a" asp-area="" asp-controller="Doctors" asp-action="Doctors">ВРАЧИ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark main_menu_item main_menu_item_a" asp-area="" asp-controller="Treatment" asp-action="Treatment">ЛЕЧЕНИЕ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark main_menu_item main_menu_item_a" asp-area="" asp-controller="Diagnostics" asp-action="Diagnostics">ДИАГНОСТИКА</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a href="#" class="dropdown-toggle main_menu_item main_menu_item_a dropdown_button" onclick="Show_Hide_Dropdown_ForPatients()" style="padding-right: 0px; padding-left: 0px; padding-top: 8px; padding-bottom: 0px;">
+                                ПАЦИЕНТАМ
+
+                                <img src="~/images/logo/green/down_arrow_green.svg" class="down_arrow_in_mobile_menu" style="margin-top: -3px; width: 10px;" />
+                            </a>
+
+                            <div id="dropdown_menu_ForPatients" class="dropdown-menu dropdown_menu_custom">
+                                <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="ForPatients" style="padding-right: 10px;">Пациентам</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="Consultations" style="padding-right: 10px;">Консультации</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="Hospitalization" style="padding-right: 10px;">Госпитализация</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="Patients_from_the_regions" style="padding-right: 10px;">Пациентам из регионов</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="Insurance_medicine" style="padding-right: 10px;">Страховая медицина</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="Paid_services" style="padding-right: 10px;">Платные услуги</a>
+                                <a class="nav-item dropdown-item nav-link main_menu_item main_menu_item_a" asp-area="" asp-controller="ForPatients" asp-action="FAQ" style="padding-right: 10px;">Часто задаваемые вопросы</a>
+                                <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                            </div>
+
+                        </li>
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark main_menu_item main_menu_item_a" asp-area="" asp-controller="Reviews" asp-action="Reviews">ОТЗЫВЫ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark main_menu_item main_menu_item_a" asp-area="" asp-controller="Contacts" asp-action="Contacts">КОНТАКТЫ</a>
+                        </li>
+                    </ul>
+
+                    <button style="margin-top: 25px;" id="making_an_appointment_button_mobile" class="making_an_appointment_button_mobile additional_tools_on_index_page_mobile">ЗАПИСАТЬСЯ НА ПРИЕМ</button>
+
+
+                    <table class="additional_tools_on_index_page_mobile">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="display: inline-block; padding-bottom: 30px;">
+                                    <div class="language">RU <img src="~/images/logo/green/down_arrow_green.svg" class="" /></div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <a href="#" id="version_for_visually_impaired_mobile"> <img src="~/images/logo/green/eye_green.svg" class="eye_logo" /> Версия для слабовидящих </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <div class="contact_information_label">Контактная информация</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <div class="additional_information_in_mobile_menu"> <img src="~/images/logo/green/pointer.svg" /> Симферополь, бул. Ленина, 5/7 </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <div class="additional_information_in_mobile_menu"> <img src="~/images/logo/green/phone_green.svg" /> +7(3652) 60 11 74 </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <div class="additional_information_in_mobile_menu"> <img src="~/images/logo/green/mail_green.svg" /> kmmc.info@ya.ru </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <img src="~/images/logo/green/social_logo_green.svg" class="" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="additional_tools_on_index_page additional_tools_on_index_page_hight_resolution">
+                    <img src="~/images/logo/search_icon.svg" class="search_icon white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/search_icon.svg" class="search_icon black_logo_in_main_menu" />
+                    <div style="display: inline-block;" class="language">RU</div>
+                    <img src="~/images/logo/down_arrow.svg" class="down_arrow white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/down_arrow.svg" class="down_arrow black_logo_in_main_menu" />
+                    <img src="~/images/logo/phone_icon.svg" class="phone_icon white_logo_in_main_menu" />
+                    <img src="~/images/logo/black/phone_icon.svg" class="phone_icon black_logo_in_main_menu" />
+                    <div class="registry_phone_number">+7 (3652) 55 47 46</div>
+
+                    <button id="making_an_appointment_button" class="making_an_appointment_button">ЗАПИСАТЬСЯ НА ПРИЕМ</button>
+                </div>
+
+            </div>
+
+            <div id="gray_rect_on_background" style="z-index: -1; height: 112px;" />
+            <div id="rectangle_on_background" style="z-index: -1; height: 113px;" />
+        </nav>
+    </header>
+        
+    <script>
+        function Hide_Fixed_Main_Menu() {
+            var main_menu = document.getElementById("main_menu");
+            main_menu.className = main_menu.className.replace(" fixed-top", "");
+            main_menu.style = "z-index: 0;";
+            
+            var making_an_appointment_Modal = document.getElementById("making_an_appointment_Modal");
+            making_an_appointment_Modal.style = "z-index: 1;";
+        }
+    </script>
+
+    <script>
+        window.dropdown_menu_About_state = 0;
+        window.dropdown_menu_ForPatients_state = 0;
+
+        function Show_Hide_Dropdown_About() {
+            var dropwdown_menu_About = document.getElementById("dropdown_menu_About");
+            var dropwdown_menu_ForPatients = document.getElementById("dropdown_menu_ForPatients");
+            if (window.dropdown_menu_About_state == 0) {
+                dropwdown_menu_About.style.display = "block";
+                window.dropdown_menu_About_state = 1;
+
+                dropwdown_menu_ForPatients.style.display = "none";
+                window.dropdown_menu_ForPatients_state = 0;
+            }
+            else
+            {
+                dropwdown_menu_About.style.display = "none";
+                window.dropdown_menu_About_state = 0;
+            }   
+        }
+
+        function Show_Hide_Dropdown_ForPatients() {
+            var dropwdown_menu_ForPatients = document.getElementById("dropdown_menu_ForPatients");
+            var dropwdown_menu_About = document.getElementById("dropdown_menu_About");
+            if (window.dropdown_menu_ForPatients_state == 0) {
+                dropwdown_menu_ForPatients.style.display = "block";
+                window.dropdown_menu_ForPatients_state = 1;
+
+                dropwdown_menu_About.style.display = "none";
+                window.dropdown_menu_About_state = 0;
+            }
+            else
+            {
+                dropwdown_menu_ForPatients.style.display = "none";
+                window.dropdown_menu_ForPatients_state = 0;
+            }   
+        }
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("making_an_appointment_Modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("making_an_appointment_button");
+        var btn_mobile = document.getElementById("making_an_appointment_button_mobile");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close_btn")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        btn_mobile.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content" style="margin-top: 90px;">
+        @RenderBody()
+
+        <div id="rectangle_on_background" style="z-index: -1" />
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <table border="0" style="width: 100%;">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left" colspan="2">
+                            <a href="#" id="version_for_visually_impaired" class="version_for_visually_impaired_caption_desktop"> <img src="~/images/logo/eye.svg" class="eye_logo" /> Версия для слабовидящих </a>
+                        </td>
+                        <td align="center">
+                            <div class="copyright">&copy; 2019 Демо версия сайта</div>
+                            <div class="copyright_mobile">&copy; 2019 Демо версия сайта</div>
+                        </td>
+                        <td align="right">
+                            <a href="" class="social_net_logo social_logo"> <img src="~/images/logo/facebook-logo.svg" /> </a>
+                            <a href="" class="social_net_logo social_logo"> <img src="~/images/logo/instagram-logo.svg" /> </a>
+                            <a href="" class="social_net_logo social_logo"> <img src="~/images/logo/odnoklassniki-logo.svg" /> </a>
+                            <a href="" class="social_logo"> <img src="~/images/logo/vk-social-network-logo.svg" /> </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </footer>
+
+    <script src="~/js/Layout/service_functions_(others)/service_functions_(others).js"></script>
+    <script src="~/js/Layout/import_(append)_bootstrap/import_(append)_bootstrap.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

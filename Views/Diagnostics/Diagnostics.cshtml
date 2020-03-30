@@ -1,0 +1,312 @@
+﻿@{
+    ViewData["Title"] = "Диагностика";
+}
+
+<link rel="stylesheet" href="~/css/Diagnostics/Diagnostics.css" />
+<link rel="stylesheet" href="~/css/List_of_categories/List_of_categories.css" />
+<link rel="stylesheet" href="~/css/Turquoise_rectangle/Turquoise_rectangle.css" />
+<link rel="stylesheet" href="~/css/schedule/schedule.css" />
+
+<style>
+    .button {
+        float: left;
+        margin-top: -30px;
+        height: 60px;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        float: right;
+    }
+
+    .green_button {
+        background: #7AABA2;
+        color: #FFFFFF;
+        width: 232px;
+        
+    }
+
+    @@media (min-width: 671px) {
+        .green_button {
+            margin-right: 50px;
+        }
+    }
+
+    @@media (max-width: 670px) {
+        .green_button {
+            width: 250px;
+            margin-right: calc(50vw - 125px - 20px);
+        }
+    }
+
+    .white_button {
+        width: 249px;
+        background: white;
+        color: black;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        margin-right: 50px;
+        margin-top: -30px;
+    }
+
+    @@media (min-width: 671px) {
+        .white_button {
+            margin-right: 50px;
+        }
+    }
+
+    @@media (max-width: 670px) {
+        .white_button {
+            display: block;
+            width: 250px;
+
+            margin-top: 20px;
+            margin-right: calc(50vw - 125px - 20px);
+        }
+    }
+</style>
+
+<script>
+    $(function () {
+        $("#question_form").load("/html_content/question_form/question_form.html");
+    });
+    $(function () {
+        $("#question_form_mobile").load("/html_content/question_form/question_form.html");
+    });
+</script>
+
+<div id="submenu" class="submenu">
+    <a asp-area="" asp-controller="Home" asp-action="Index">
+        <img src="~/images/logo/submenu/home.svg" />
+    </a>
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <div class="sub_item">
+        Диагностика
+    </div>
+</div>
+
+<div id="gray_rect_background_of_question_form">
+</div>
+
+<div id="question_form">
+</div>
+
+<div class="main_page_template_table" id="main_page_template_table">
+    <!-- Мобильная версия -->
+
+    <div class="row justify-content-md-center small_text_div_text_page">
+        <div class="col-md-6" style=" flex: 0 0 100%;">
+
+            <div id="content_mobile" class="content_mobile">
+
+                <p class="treatment_title">
+                    Диагностика
+                </p>
+
+                <style>
+                    ul {
+                        list-style: none;
+                    }
+
+                    .green_mark::before {
+                        content: "\2022";
+                        color: green;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: -1em;
+                    }
+                </style>
+
+                <div class="list_of_sections_box_mobile">
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Digital_x_ray">
+                                Цифровой рентген
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Fluorograph">
+                                Флюорограф
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Ultrasound_scan">
+                                Узи
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Endoscopy">
+                                Эндоскопия
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="CT_scan">
+                                Компьютерная томография
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="PCR_studies">
+                                Исследования методом ПЦР
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Biochemical_studies">
+                                Биохимические исследования
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="General_clinical_research">
+                                Общеклинические исследования
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Immunological_studies">
+                                Иммунологические исследования
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <button class="green_button button">
+                        Узнать стоимость
+                    </button>
+
+                    <button class="white_button button">
+                        Консультация врача
+                    </button>
+                </div>
+
+
+                <div id="question_form_mobile">
+                </div>
+
+                <div class="schedule">
+                    <div class="title_18">
+                        ГРАФИК РАБОТЫ КЛИНИКИ
+                    </div>
+                    <div class="text_16">
+                        Приём врачей поликлинического отделения КММЦ Святителя Луки,
+                        <br>
+                        по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+                        <br>
+                        Стационар работает круглосуточно.
+                        <br>
+                        Посещение пациентов с 17:00 до 19:30.
+                    </div>
+                    <br>
+
+                    <style>
+                        @@media (min-width: 1366px) and (max-width: 1920px) {
+                            .margin_top_to_learn_more_caption_mobile {
+                                margin-top: calc(10px - (100vw - 1366px) * 10 / (1920 - 1366));
+                            }
+                        }
+
+                        @@media (min-width: 1921px) {
+                            .margin_top_to_learn_more_caption_mobile {
+                                margin-top: 0px;
+                            }
+                        }
+
+                        .to_learn_more_caption_mobile {
+                            margin-top: calc(14px + (100vw - 320px) * (18 - 14) / (768 - 320));
+                        }
+                    </style>
+
+                    <a href="" class="to_learn_more_caption_mobile">
+                        УЗНАТЬ БОЛЬШЕ &rarr;
+                    </a>
+                    <br>
+                    <a href="" class="to_learn_more_caption_mobile">
+                        ПЕРЕЙТИ К ВОПРОСЫ — ОТВЕТЫ &rarr;
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Десктопная версия -->
+
+    <div class="row justify-content-md-center big_text_div_text_page">
+        <div class="col-md-6" style="        vertical-align: middle;
+        width: calc(750px + (100vw - 1366px) * 224 / 480);
+        flex: 0 0 55%;">
+
+            <div id="content" class="content" style="height: 550px;">
+                <p class="treatment_title">
+                    Диагностика
+                </p>
+
+                <div class="list_of_sections_box">
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Digital_x_ray">
+                                Цифровой рентген
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Fluorograph">
+                                Флюорограф
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Ultrasound_scan">
+                                Узи
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Endoscopy">
+                                Эндоскопия
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="CT_scan">
+                                Компьютерная томография
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="PCR_studies">
+                                Исследования методом ПЦР
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Biochemical_studies">
+                                Биохимические исследования
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="General_clinical_research">
+                                Общеклинические исследования
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="Diagnostics" asp-action="Immunological_studies">
+                                Иммунологические исследования
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="green_button button">
+                    Узнать стоимость
+                </button>
+                <button class="white_button button">
+                    Консультация врача
+                </button>
+
+            </div>
+        </div>
+        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 45%;">
+            <div style="margin-top: 1px;" align="center">
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

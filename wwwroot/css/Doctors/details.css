@@ -1,0 +1,61 @@
+﻿.doctor_photo {
+    width: 350px;
+}
+
+.full_name {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #2A2A2A;
+}
+
+.more_about_the_doctor {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #2A2A2A;
+}
+
+.making_an_appointment_button_on_doctors_page {
+    background: #587D5F;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-left: 48px;
+    padding-right: 47px;
+    padding-top: 21px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details {
+    background-color: white;
+    display: none;
+    padding-top: 50px;
+    padding-bottom: 73px;
+    width: 350px;
+}
+
+.description {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    width: 350px;
+    white-space: normal;
+}

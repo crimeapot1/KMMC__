@@ -1,0 +1,177 @@
+﻿.making_an_appointment_form {
+    background: #F0F0F0;
+    padding-left: 30px;
+    padding-right: 31px;
+    padding-top: calc(27px + (100vw - 1440px) * (50 - 27) / 480);
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+.making_an_appointment_form_send_button {
+    width: 200px;
+    height: 60px;
+    margin-top: calc(30px + (100vw - 1440px) * (50 - 30) / 480);
+    background: #7AABA2;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 7px;
+    border: none;
+}
+
+
+
+@media (max-width: 1440px) {
+    .making_an_appointment_form_send_button {
+        width: 150px;
+        height: 45px;
+        margin-top: 30px;
+        background: #7AABA2;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 7px;
+        border: none;
+    }
+}
+
+@media (max-width: 1210px) {
+    .making_an_appointment_form {
+        padding-bottom: 20px;
+    }
+
+    .making_an_appointment_form_send_button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1022px) {
+    .making_an_appointment_form_send_button {
+        height: 40px;
+        padding-top: 5px;
+    }
+}
+
+.making_an_appointment_form_response {
+    margin-top: 20px;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #27963C;
+    display: block;
+}
+
+@media (max-width: 1140px) {
+    .making_an_appointment_form_response {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1022px) {
+    .making_an_appointment_form_response {
+        font-size: 14px;
+    }
+}
+
+.input_in_making_an_appointment_form {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: black;
+    background-color: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #9E9E9C;
+    width: 100%;
+
+    margin-top: calc(20px + (100vw - 1440px) * (30 - 20) / 480);
+}
+
+
+@media (max-width: 1095px) {
+    .input_in_making_an_appointment_form {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1055px) {
+    .input_in_making_an_appointment_form {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .making_an_appointment_form {
+        padding-top: 30px;
+    }
+
+    .making_an_appointment_form_send_button {
+        margin-top: 30px;
+    }
+
+    .input_in_making_an_appointment_form {
+        margin-top: 20px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .making_an_appointment_form_title {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1326px) {
+    .making_an_appointment_form_title {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 1366px) {
+    .making_an_appointment_form_title {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        text-align: left;
+    }
+}
+
+/*
+@media (min-width: 1000px) {
+    .making_an_appointment_form_title {
+        font-size: 20px;
+    }
+}
+    */

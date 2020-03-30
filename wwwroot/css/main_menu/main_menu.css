@@ -1,0 +1,314 @@
+﻿.main_menu_item {
+    display: inline-block;
+    margin-right: calc(10px + (100vw - 1440px) * 29 / 480);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main_menu_item_a {
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+.main_menu {
+    display: inline-block;
+    table-layout: fixed; /*Optional*/
+    margin-left: 50px;
+}
+/* --------------------------------------------------------- */
+.additional_tools_on_index_page {
+    display: none;
+}
+@media (min-width: 768.8px) {
+    .additional_tools_on_index_page {
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+@media (max-width: 768.2px) {
+    .additional_tools_on_index_page {
+        display: none;
+    }
+}
+/* --------------------------------------------------------- */
+.KMMTs_logo {
+    width: 60px;
+}
+
+.kfu_logo {
+    display: none;
+}
+
+@media (min-width: 768.8px) {
+    .kfu_logo {
+        width: 60px;
+        display: block;
+    }
+}
+
+.kfu_logo {
+    width: 60px;
+    margin-left: calc(20px + (100vw - 768px) * 15 / 299);
+    margin-right: calc(20px + (100vw - 768px) * 15 / 299);
+}
+
+@media (min-width: 1440.2px) {
+    .KMMTs_logo {
+        width: calc(60px + (100vw - 1440px) / 24);
+        max-width: 80px;
+    }
+
+    .kfu_logo {
+        width: calc(60px + (100vw - 1440px) / 24);
+        max-width: 80px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kfu_logo {
+        width: 60px;
+        max-width: 80px;
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+}
+/* --------------------------------------------------------- */
+.search_icon {
+    margin-right: 27.25px;
+    vertical-align: top;
+    margin-top: 23px;
+}
+
+@media (min-width: 1440px) {
+    .search_icon {
+        width: calc(12.75px + (100vw - 1440px) * 4.25 / 480);
+    }
+}
+
+.phone_icon {
+    margin-right: 21px;
+    vertical-align: top;
+    margin-top: 23px;
+}
+
+.down_arrow {
+    vertical-align: top;
+    margin-top: 26px;
+    margin-right: 26px;
+}
+
+@media (min-width: 1440px) {
+    .search_icon {
+        margin-right: calc(27.25px + (100vw - 1440px) * 0.05989583333);
+    }
+
+    .phone_icon {
+        margin-right: calc(8px + (100vw - 1440px) * 13 / 480);
+    }
+
+    .down_arrow {
+        margin-right: calc(26px + (((100vw - 1440px) * 29) / 480));
+    }
+}
+
+@media (min-width: 1921px) {
+    .search_icon {
+        margin-right: calc(27.25px + (100vw - 1921px) * 0.02989583333);
+    }
+
+    .phone_icon {
+        margin-right: calc(8px + (100vw - 1921px) * 6.5 / 480);
+    }
+
+    .down_arrow {
+        margin-right: calc(26px + (((100vw - 1921px) * 14.5) / 480));
+    }
+}
+
+
+.language {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    vertical-align: top;
+    margin-top: 23px;
+}
+
+@media (max-width: 1365.2px) {
+    .language {
+        color: black;
+    }
+}
+/* --------------------------------------------------------- */
+
+.contact_information_label {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+/* Мобильная версия */
+/* --------------------------------------------------------- */
+.close_menu_button_mobile {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 41px;
+    display: none;
+}
+
+@media (min-width: 768.2px) {
+    .additional_tools_on_index_page_mobile {
+        display: none;
+    }
+}
+
+.kfu_logo_mobile {
+    display: none;
+}
+
+@media (max-width: 768.2px) {
+    .kfu_logo_mobile {
+        width: 60px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+#version_for_visually_impaired_mobile {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2A2A2A;
+}
+
+.additional_information_in_mobile_menu {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    color: #2A2A2A;
+}
+
+.input_search {
+    margin-top: 41px;
+    background-color: transparent;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    color: #9E9E9C;
+    width: 100%;
+}
+/* --------------------------------------------------------- */
+
+
+/* Отображение, скрытие черных и белых значков */
+/* --------------------------------------------------------- */
+
+@media (min-width: 1366px) {
+    .black_logo_in_main_menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1365px) {
+    .white_logo_in_main_menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1440.2px) {
+    .additional_tools_on_index_page_low_resolution {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    .additional_tools_on_index_page_hight_resolution {
+        display: none;
+    }
+}
+/* --------------------------------------------------------- */
+@media (max-width: 1365px) {
+    .registry_phone_number {
+        color: black;
+    }
+}
+
+
+.dropdown_button {
+    background-color: transparent;
+    border: 0px;
+}
+
+
+.dropdown_menu_custom {
+    border: 0px;
+    font-family: LatoWeb;
+    color: black;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media (min-width: 1441px) {
+    #dropdown_menu_About {
+        width: 200px;
+        /* отступ 20px + 2 * ширину логотипа
+
+
+        */
+        margin-left: calc((20px + (100vw - 1440px) * 0.0625) + 2 * (60px + (100vw - 1440px) / 24) + 100px - 50px);
+        text-align: center;
+        background-color: #E5E5E5;
+    }
+}
+
+@media (min-width: 1921px) {
+    #dropdown_menu_About {
+        margin-left: calc((20px + (100vw - 1440px) * 0.0625) + 2 * (60px + (100vw - 1440px) / 24) + 100px - 50px - (100vw - 1921px) * 55 / (2560 - 1920));
+    }
+}
+
+
+@media (min-width: 1441px) {
+    #dropdown_menu_ForPatients {
+        width: 200px;
+        /* отступ 20px + 2 * ширину логотипа
+
+
+        */
+        margin-left: calc((20px + (100vw - 1440px) * 0.0625) + 2 * (60px + (100vw - 1440px) / 24) + 100px + 300px + (100vw - 1441px) * 120 / 480);
+        text-align: center;
+        background-color: #E5E5E5;
+    }
+}
+
+@media (min-width: 1921px) {
+    #dropdown_menu_ForPatients {
+        margin-left: calc((20px + (100vw - 1440px) * 0.0625) + 2 * (60px + (100vw - 1440px) / 24) + 100px + 420px + (100vw - 1921px) * 105 / (2560 - 1920));
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .down_arrow_in_mobile_menu {
+        position: absolute;
+        right: 20px;
+    }
+}

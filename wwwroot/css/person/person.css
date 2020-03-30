@@ -1,0 +1,157 @@
+﻿.full_name_mobile {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #2A2A2A;
+}
+
+@media (max-width: 1000px) {
+    .full_name_mobile {
+        margin-bottom: calc(7px + (100vw - 320px) * 3 / 680);
+    }
+}
+/* ---------------------------------------------------------------------------------------- */
+
+@media(min-width: 990px) {
+    .full_name {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 130%;
+        /* or 47px */
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: calc((100vw - 1000px) * 5 / 450);
+    }
+}
+
+@media(min-width: 1440px) {
+    .full_name {
+        font-style: normal;
+        font-weight: bold;
+        font-size: calc(24px + (100vw - 1440px) * 12 / 480);
+        line-height: 130%;
+        /* or 47px */
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: calc(5px + (100vw - 1440px) * 25 / 480);
+    }
+}
+
+
+.senior_management_position {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    /* identical to box height, or 21px */
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 10px;
+}
+
+@media (min-width: 1440px) {
+    .senior_management_position {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: 500;
+        font-size: calc(14px + (100vw - 1440px) * 2 / 480);
+        line-height: 130%;
+        /* identical to box height, or 21px */
+        text-transform: uppercase;
+        color: #000000;
+        margin-top: 10px;
+    }
+}
+
+.senior_management_img_mobile {
+    max-width: 100%;
+}
+
+
+.senior_management_img {
+    height: 426px;
+}
+
+@media (min-width: 1440px) {
+    .senior_management_img {
+        height: calc(426px + (100vw - 1440px) * 174 / 480);
+    }
+}
+
+
+
+.senior_management_position_mobile {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+
+    text-transform: uppercase;
+    color: #000000;
+}
+
+@media (max-width: 1000px) {
+    .senior_management_position_mobile {
+        margin-bottom: calc(14px + (100vw - 320px) * 6 / 680)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text_on_senior_management_position_page_mobile {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    color: #2A2A2A;
+}
+
+
+
+.text_on_senior_management_position_page {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #2A2A2A;
+    margin-top: 20px;
+}
+
+
+
+@@media(min-width: 1440px) {
+    .text_on_senior_management_position_page {
+        font-style: normal;
+        font-weight: normal;
+        font-size: calc(14px + (100vw - 1440px) * 2 / 480);
+        line-height: 150%;
+        color: #2A2A2A;
+        margin-top: calc(20px + (100vw - 1440px) * 10 / 480 );
+    }
+}

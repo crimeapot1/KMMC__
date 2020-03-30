@@ -1,0 +1,71 @@
+﻿#right_part_content_flush_background_rect {
+    position: absolute;
+    top: 170px;
+    z-index: 1;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    #right_part_content_flush_background_rect {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    #right_part_content_flush_background_rect {
+        right: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (370px + (100vw - 769px) * 1 / 2.8));
+    }
+}
+
+@media (min-width: 1366px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (591px + (100vw - 1366px) * 1 / 75));
+    }
+}
+
+
+@media (min-width: 1441px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (590px + (100vw - 1441px) * 29.5 / 69));
+    }
+}
+
+
+@media (min-width: 1510px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (619.5px + (100vw - 1510px) * 56 / 100));
+    }
+}
+
+
+@media (min-width: 1610px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (675.5px + (100vw - 1610px) * 30 / 100));
+    }
+}
+
+
+@media (min-width: 1710px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (705.5px + (100vw - 1710px) * 30 / 70));
+    }
+}
+
+
+@media (min-width: 1780px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (735.5px + (100vw - 1780px) * 39.930929626 / 70));
+    }
+}
+
+@media (min-width: 1850px) {
+    #right_part_content_flush_background_rect {
+        left: calc(100vw - (775.430929626px + (100vw - 1850px) * 15.569070374 / 70));
+    }
+}

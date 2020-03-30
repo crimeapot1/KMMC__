@@ -1,0 +1,334 @@
+﻿.text_on_index_page {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    color: #2A2A2A;
+    /*width: 559px;*/
+}
+
+@media (max-width: 1365.8px) {
+    .text_on_index_page {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        /* or 24px */
+        color: #2A2A2A;
+        /*width: 559px;*/
+    }
+}
+
+@media (max-width: 1194.8px) {
+    .text_on_index_page {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        /* or 24px */
+        color: #2A2A2A;
+        /*width: 559px;*/
+    }
+}
+
+@media (max-width: 1194.8px) {
+    .text_on_index_page {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        /* or 24px */
+        color: #2A2A2A;
+    }
+}
+
+
+
+
+
+.text_on_index_page_mobile {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2A2A2A;
+}
+
+
+
+
+.mySlides_big {
+    display: none;
+    width: calc(739px + (100vw - 1440px) * 0.64583333333);
+}
+
+.mySlides_small {
+    display: none;
+}
+
+
+.Saint_Luke_caption {
+    color: #27963C;
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 130%;
+    /* or 62px */
+    text-align: right;
+    margin-right: calc(0px + (100vw - 1366px) * 82 / 554);
+}
+
+.Saint_Luke_caption_mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .Saint_Luke_caption {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .Saint_Luke_caption_mobile {
+        color: #27963C;
+        font-family: Caveat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 54px;
+        line-height: 130%;
+        /* or 62px */
+        text-align: right;
+        margin-left: auto;
+        margin-right: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 1440px) {
+    .Saint_Luke_caption {
+        color: #27963C;
+        font-family: Caveat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 130%;
+        /* or 62px */
+        text-align: right;
+        margin-right: calc(0px + (100vw - 1366px) * 82 / 554);
+    }
+}
+
+@media (max-width: 1320px) {
+    .Saint_Luke_caption {
+        color: #27963C;
+        font-family: Caveat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 130%;
+        /* or 62px */
+        text-align: right;
+        margin-right: calc(0px + (100vw - 1366px) * 82 / 554);
+    }
+}
+
+
+@media (max-width: 450px) {
+    .Saint_Luke_caption_mobile {
+        color: #27963C;
+        font-family: Caveat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 130%;
+        /* or 62px */
+        text-align: right;
+        margin-left: auto;
+        margin-right: 0;
+        display: block;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------- */
+.clinical_medical_multidisciplinary_center_caption_on_index_page {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 130%;
+    /* or 47px */
+    text-transform: uppercase;
+    color: #2A2A2A;
+    margin-top: 166.71px;
+}
+
+@media (max-width: 1790px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1194.8px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1045px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 1045px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page_mobile {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 130%;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 450px) {
+    .clinical_medical_multidisciplinary_center_caption_on_index_page_mobile {
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 130%;
+        text-transform: uppercase;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+.CFU_caption_on_index_page {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+    /* or 48px */
+    text-transform: uppercase;
+    color: #2A2A2A;
+    /*width: 559px;*/
+}
+
+@media (max-width: 1365.8px) {
+    .CFU_caption_on_index_page {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 200%;
+        /* or 48px */
+        text-transform: uppercase;
+        color: #2A2A2A;
+        /*width: 559px;*/
+    }
+}
+
+@media (max-width: 1194.8px) {
+    .CFU_caption_on_index_page {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        /* or 48px */
+        text-transform: uppercase;
+        color: #2A2A2A;
+        /*width: 559px;*/
+    }
+}
+
+
+.CFU_caption_on_index_page_mobile {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 200%;
+    /* or 48px */
+    text-transform: uppercase;
+    color: #2A2A2A;
+}
+
+@media (max-width: 450px) {
+    .CFU_caption_on_index_page_mobile {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        /* or 48px */
+        text-transform: uppercase;
+        color: #2A2A2A;
+    }
+}
+
+.left_col {
+    max-width: 771px;
+}
+
+
+@media (min-width: 1921px) {
+    .left_col {
+        max-width: calc(771px + (100vw - 1921px)/4.5);
+    }
+}

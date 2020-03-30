@@ -1,0 +1,89 @@
+﻿<style>
+    .title_in_question_form {
+        margin-bottom: calc(15px + (100vw - 1440px) * (50 - 15) / 480);
+
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2A2A2A;
+        text-align: left;
+    }
+
+    @media (min-width: 1921px) {
+        .title_in_question_form {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .title_in_question_form {
+            margin-bottom: calc(10px + (100vw - 320px) * (23 - 10) / (768 - 320));
+            font-size: calc(16px + (100vw - 320px) * (20 - 16) / (768 - 320));
+        }
+    }
+
+    .input_in_question_form_with_margin_top {
+        margin-top: calc(20px + (100vw - 1440px) * (50 - 20) / 480);
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .input_in_question_form_with_margin_top {
+            margin-top: calc(10px + (100vw - 320px) * (30 - 10) / (768 - 320));
+        }
+
+        .input_in_question_form_with_margin_top_mobile {
+            margin-top: calc(10px + (100vw - 320px) * (30 - 10) / (768 - 320));
+        }
+    }
+
+
+
+    @media (min-width: 1921px) {
+        .input_in_question_form_with_margin_top {
+            margin-top: 50px;
+        }
+    }
+
+
+    @media (max-width: 1920px) {
+        .input_in_question_form_half_width {
+            width: calc(224px + (100vw - 1366px) * (247 - 224) / 480);
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .input_in_question_form_half_width {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1921px) {
+        .input_in_question_form_half_width {
+            width: 247px;
+        }
+    }
+
+
+
+</style>
+
+<div class="question_form" align="left">
+    <div class="title_in_question_form">
+        У вас есть вопрос?
+        <br />
+        Мы с радостью на него ответим.
+    </div>
+
+    <input type="text" class="input_in_question_form input_in_question_form_half_width" value="Ваше имя" style="margin-right: 28px;" />
+    <input type="text" class="input_in_question_form input_in_question_form_half_width input_in_question_form_with_margin_top_mobile" value="Ваш номер телефона" />
+    <input type="text" class="input_in_question_form input_in_question_form_with_margin_top" value="Ваш вопрос" />
+
+    <button class="question_form_send_button">
+        ОТПРАВИТЬ
+    </button>
+</div>

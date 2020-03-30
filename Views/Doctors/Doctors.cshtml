@@ -1,0 +1,564 @@
+﻿@{
+    ViewData["Title"] = "Врачи";
+}
+
+<link rel="stylesheet" href="~/css/Doctors/Doctors.css" />
+<link rel="stylesheet" href="~/css/Doctors/details.css" />
+
+<div id="submenu" class="submenu">
+    <a asp-area="" asp-controller="Home" asp-action="Index">
+        <img src="~/images/logo/submenu/home.svg" />
+    </a>
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <div class="sub_item">
+        Врачи
+    </div>
+</div>
+
+<div class="main_page_template_table" id="main_page_template_table">
+    <div style="margin-bottom: 42px;">
+        <div class="h1_body_content" style="display: inline-block;">
+            НАШИ ВРАЧИ
+        </div>
+
+        <div class="alphabet">
+            <div class="char">
+                А
+            </div>
+            <div class="char">
+                Б
+            </div>
+            <div class="char">
+                В
+            </div>
+            <div class="char">
+                Г
+            </div>
+            <div class="char">
+                Д
+            </div>
+            <div class="char">
+                Е
+            </div>
+            <div class="char">
+                Ж
+            </div>
+            <div class="char">
+                З
+            </div>
+            <div class="char">
+                И
+            </div>
+            <div class="char">
+                К
+            </div>
+            <div class="char">
+                Л
+            </div>
+            <div class="char">
+                М
+            </div>
+            <div class="char">
+                Н
+            </div>
+            <div class="char">
+                О
+            </div>
+            <div class="char">
+                П
+            </div>
+            <div class="char">
+                Р
+            </div>
+            <div class="char">
+                С
+            </div>
+            <div class="char">
+                Т
+            </div>
+            <div class="char">
+                У
+            </div>
+            <div class="char">
+                Х
+            </div>
+            <div class="char">
+                Я
+            </div>
+        </div>
+
+        <div class="navigation_on_doctors_page" style="display: inline-block; float: right;">
+            <select class="doctors_select">
+                <option>
+                    Все врачи
+                </option>
+                <option>
+                    Поликлиническое отделение
+                </option>
+                <option>
+                    Урологическое отделение
+                </option>
+                <option>
+                    Отделение хирургии
+                </option>
+                <option>
+                    Отделение лучевой диагностики
+                </option>
+                <option>
+                    Отделение анестезиологии и реанимации
+                </option>
+                <option>
+                    Отделение анестезиологии и реанимации
+                </option>
+                <option>
+                    Отделение травматологии и ортопедии
+                </option>
+                <option>
+                    Лабораторные исследования
+                </option>
+            </select>
+
+            <button style="background: transparent; border: 0px;" onclick="Shift_Left_Slider()"> <img src="~/images/logo/Doctors/left_arrow.svg" style="display: inline-block; margin-right: 20px; margin-top: -12px;" /> </button>
+            <div id="index_navigation_doctors" class="navigation_indexes" style="display: inline-block;">
+                5 / 8
+            </div>
+            <button style="background: transparent; border: 0px;" onclick="Shift_Right_Slider()"> <img src="~/images/logo/Doctors/right_arrow.svg" style="display: inline-block; margin-left: 20px;" /> </button>
+        </div>
+    </div>
+
+    <div id="list_of_doctors" class="parent">
+        <div class="child">
+            <img src="~/images/Content/Doctors/Radiation_Diagnostics/Черноротов_Владимир_Алексеевич_заведующий.JPG" id="doctor_photo_8" class="doctor_photo" onmouseover="Show_Hide_Details(8, 'show')" onmouseout="Show_Hide_Details(8, 'hide')" />
+
+            <div id="d8" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_8" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Черноротов Владимир Алексеевич
+            </div>
+            <div class="description">
+                Заведующий отделением лучевой диагностики, врач рентгенолог высшей категории, Доктор медицинских наук, профессор Стаж работы: 35 лет.
+            </div>
+        </div>
+
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Urology/Eremenko_Sergei_medium.jpg" id="doctor_photo_6" class="doctor_photo" onmouseover="Show_Hide_Details(6, 'show')" onmouseout="Show_Hide_Details(6, 'hide')" />
+
+            <div id="d6" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_6" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Еременко Сергей Николаевич
+            </div>
+            <div class="description">
+                Заведующий отделением урологии, врач-уролог высшей категории, врач-онколог, член Европейской ассоциации урологов, стаж - 37 лет.
+            </div>
+        </div>
+
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Surgery/Филатов_Александр_Сергеевич.JPG" id="doctor_photo_5" class="doctor_photo" onmouseover="Show_Hide_Details(5, 'show')" onmouseout="Show_Hide_Details(5, 'hide')" />
+
+            <div id="d5" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_5" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Филатов_Александр_Сергеевич
+            </div>
+            <div class="description">
+                Врач-хирург, кандидат медицинских наук, стаж-39.
+            </div>
+        </div>
+
+
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Surgery/Аблаев_Эльдар_Эдемович.JPG" id="doctor_photo_1" class="doctor_photo" onmouseover="Show_Hide_Details(1, 'show')" onmouseout="Show_Hide_Details(1, 'hide')" />
+
+            <div id="d1" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_1" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Аблаев Эльдар Эдемович
+            </div>
+            <div class="description">
+                Врач-хирург, кандидат медицинских наук, стаж-14.
+            </div>
+        </div>
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Surgery/Безруков_Олег_Филиппович_заведующий.JPG" id="doctor_photo_2" class="doctor_photo" onmouseover="Show_Hide_Details(2, 'show')" onmouseout="Show_Hide_Details(2, 'hide')" />
+
+            <div id="d2" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_2" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Безруков Олег Филиппович
+            </div>
+            <div class="description">
+                Врач-хирург.
+            </div>
+        </div>
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Surgery/Каракурсаков_Нариман_Эскендерович_medium.jpg" id="doctor_photo_3" class="doctor_photo" onmouseover="Show_Hide_Details(3, 'show')" onmouseout="Show_Hide_Details(3, 'hide')" />
+
+            <div id="d3" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_3" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Каракурсаков Нариман Эскендерович
+            </div>
+            <div class="description">
+                Врач-хирург, сосудистый хирург, кандидат медицинских наук, стаж-15.
+            </div>
+        </div>
+
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Radiation_Diagnostics/Гладилин_Игорь_Владимирович.JPG" id="doctor_photo_7" class="doctor_photo" onmouseover="Show_Hide_Details(7, 'show')" onmouseover="Show_Hide_Details(6, 'show')" onmouseout="Show_Hide_Details(7, 'hide')" />
+
+            <div id="d7" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_7" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Гладилин Игорь Владимирович
+            </div>
+            <div class="description">
+                Врач-рентгенолог высшей категории, Сертификаты по смежным специальностям: компьютерная томография, ультразвуковая диагностика.Стаж работы: 21 год.
+            </div>
+        </div>
+
+        <div class="child not_first">
+            <img src="~/images/Content/Doctors/Surgery/Пучкина_Галина_Анатольевна.JPG" id="doctor_photo_4" class="doctor_photo" onmouseover="Show_Hide_Details(4, 'show')" onmouseout="Show_Hide_Details(4, 'hide')" />
+
+            <div id="d4" class="details">
+                <div class="more_about_the_doctor">
+                    Подробнее о враче
+                </div>
+
+                <div id="MAB_4" class="making_an_appointment_button_on_doctors_page">
+                    Записаться на прием
+                </div>
+            </div>
+
+            <div class="full_name">
+                Пучкина Галина Анатольевна
+            </div>
+            <div class="description">
+                Врач-гинеколог, стаж-5.
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="row justify-content-md-center small_slider_div">
+        <div class="col-md-6" style="padding-bottom: 65px; flex: 0 0 100%;">
+            <div style="margin-top: 1px; max-height: 700px;" align="center">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center small_main_text">
+        <div class="col-md-6" style="flex: 0 0 100%;">
+
+
+
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center big_text_div">
+        <div class="col-md-6" style="vertical-align: middle;
+        width: calc(661px + (100vw - 1440px) * 0.22916666666);
+        flex: 0 0 42.362637362%;
+        max-width: 771px;">
+
+
+        </div>
+        <div class="col-md-6 big_slider_div" style="padding-bottom: 65px;  flex: 0 0 57.637362637%;">
+        </div>
+    </div>
+</div>
+
+<script>
+    window.cur_index = 5;
+    window.slider_ready = 1;
+
+    function Shift_Left_Slider() {
+        if (window.slider_ready == 1) {
+            var leftPos = $('#list_of_doctors').scrollLeft();
+            $("#list_of_doctors").animate({ scrollLeft: leftPos - 350 - 12.5 }, 800);
+            window.slider_ready = 0;
+            setTimeout("window.slider_ready = 1;", 900);
+
+            if (leftPos >= 125) {
+                window.cur_index = Math.max(1, window.cur_index - 1);
+            }
+
+            var index_div = document.getElementById("index_navigation_doctors");
+            index_div.innerHTML = window.cur_index + " / 8";
+        }
+    }
+    function Shift_Right_Slider() {
+        if (window.slider_ready == 1) {
+            var leftPos = $('#list_of_doctors').scrollLeft();
+            $("#list_of_doctors").animate({ scrollLeft: leftPos + 350 + 12.5 }, 800);
+            window.slider_ready = 0;
+            setTimeout("window.slider_ready = 1;", 900);
+
+            window.cur_index = Math.min(8, window.cur_index + 1);
+
+            var index_div = document.getElementById("index_navigation_doctors");
+            index_div.innerHTML = window.cur_index + " / 8";
+        }
+    }
+
+    function Refresh_Index_Of_Slider() {
+        window.number_of_doctors = 8;
+
+        var leftPos = $('#list_of_doctors').scrollLeft();
+        var width = $('#list_of_doctors').offsetWidth;
+        var rightPos = leftPos + width;
+
+        var margin = (19 + (document.documentElement.clientWidth - 1440) * 6 / 480);
+
+        var index = 0;
+
+        for (var i = 1; i <= window.number_of_doctors; i++) {
+            if (rightPos - 350 - margin > 0) {
+                rightPos = rightPos - (350 + margin);
+                index++;
+            }
+            else break;
+        }
+
+        window.cur_index = index;
+
+        var index_div = document.getElementById("index_navigation_doctors");
+        index_div.innerHTML = window.cur_index + " / 8";
+    }
+
+    window.onload = function () {
+        setInterval(Refresh_Index_Of_Slider(), 100);
+    };
+</script>
+
+
+<script>
+    function Show_Hide_Details(index, action) {
+        if (action == "show") {
+            if (index == 1) {
+                var obj = document.getElementById("doctor_photo_1");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d1");
+                obj.style.display = "block";
+            }
+            if (index == 2) {
+                var obj = document.getElementById("doctor_photo_2");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d2");
+                obj.style.display = "block";
+            }
+            if (index == 3) {
+                var obj = document.getElementById("doctor_photo_3");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d3");
+                obj.style.display = "block";
+            }
+            if (index == 4) {
+                var obj = document.getElementById("doctor_photo_4");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d4");
+                obj.style.display = "block";
+            }
+            if (index == 5) {
+                var obj = document.getElementById("doctor_photo_5");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d5");
+                obj.style.display = "block";
+            }
+            if (index == 6) {
+                var obj = document.getElementById("doctor_photo_6");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d6");
+                obj.style.display = "block";
+            }
+            if (index == 7) {
+                var obj = document.getElementById("doctor_photo_7");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d7");
+                obj.style.display = "block";
+            }
+            if (index == 8) {
+                var obj = document.getElementById("doctor_photo_8");
+                obj.style.display = "none";
+
+                obj = document.getElementById("d8");
+                obj.style.display = "block";
+            }
+        }
+
+        if (action == "hide") {
+            if (index == 1) {
+                var obj = document.getElementById("d1");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_1");
+                obj.style.display = "block";
+            }
+            if (index == 2) {
+                var obj = document.getElementById("d2");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_2");
+                obj.style.display = "block";
+            }
+            if (index == 3) {
+                var obj = document.getElementById("d3");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_3");
+                obj.style.display = "block";
+            }
+            if (index == 4) {
+                var obj = document.getElementById("d4");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_4");
+                obj.style.display = "block";
+            }
+            if (index == 5) {
+                var obj = document.getElementById("d5");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_5");
+                obj.style.display = "block";
+            }
+            if (index == 6) {
+                var obj = document.getElementById("d6");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_6");
+                obj.style.display = "block";
+            }
+            if (index == 7) {
+                var obj = document.getElementById("d7");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_7");
+                obj.style.display = "block";
+            }
+            if (index == 8) {
+                var obj = document.getElementById("d8");
+                obj.style.display = "none";
+
+                obj = document.getElementById("doctor_photo_8");
+                obj.style.display = "block";
+            }
+        }
+
+    }
+
+</script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("making_an_appointment_Modal");
+
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("MAB_1");
+    var btn2 = document.getElementById("MAB_2");
+    var btn3 = document.getElementById("MAB_3");
+    var btn4 = document.getElementById("MAB_4");
+    var btn5 = document.getElementById("MAB_5");
+    var btn6 = document.getElementById("MAB_6");
+    var btn7 = document.getElementById("MAB_7");
+    var btn8 = document.getElementById("MAB_8");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close_btn")[0];
+
+    // When the user clicks the button, open the modal
+    btn1.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn2.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn3.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn4.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn5.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn6.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn7.onclick = function () {
+        modal.style.display = "block";
+    }
+    btn8.onclick = function () {
+        modal.style.display = "block";
+    }
+</script>

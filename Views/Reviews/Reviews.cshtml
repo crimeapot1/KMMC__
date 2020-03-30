@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Отзывы";
+}
+
+<link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
+<link rel="stylesheet" href="~/css/Reviews/Reviews.css" />
+
+<style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .content::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE and Edge */
+    .content {
+      -ms-overflow-style: none;
+    }
+</style>
+
+<script>
+    $(function () {
+        $("#list_of_reviews").load("/html_content/list_of_reviews/list_of_reviews.html");
+    });
+</script>
+
+<div id="submenu" class="submenu">
+    <a asp-area="" asp-controller="Home" asp-action="Index">
+        <img src="~/images/logo/submenu/home.svg" />
+    </a>
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <div class="sub_item sub">
+        Отзывы
+    </div>
+</div>
+
+
+<div class="main_page_template_table" id="main_page_template_table">
+    <!-- Мобильная версия -->
+
+    <div class="row justify-content-md-center small_text_div_text_page">
+        <div class="col-md-6" style="flex: 0 0 100%;">
+
+            <div id="content_mobile" class="content_mobile">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Десктопная версия -->
+
+    <div class="row justify-content-md-center big_text_div_text_page">
+        <div class="col-md-6" style="vertical-align: middle;
+width: calc(750px + (100vw - 1440px) * 224 / 480);
+flex: 0 0 57%;">
+
+            <div id="content" class="content">
+                <div class="content_title" style="margin-bottom: 54px;">
+                    Отзывы пациентов
+                </div>
+
+                <div id="content" class="content" style="height: auto; overflow: hidden;">
+                    <div>
+                        <img src="~/images/Content/Reviews/1.png" class="reviews_img" width="891" />
+                    </div>
+
+                    <div>
+                        <a href="" class="to_learn_more_caption">
+                            Перейти на наш youtube канал
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 43%;">
+            <div style="margin-top: 1px;" align="center">
+
+                <div id="list_of_reviews">
+                </div>
+
+            </div>
+            <br>
+
+        </div>
+    </div>
+</div>

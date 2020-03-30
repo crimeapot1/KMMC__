@@ -1,0 +1,31 @@
+﻿.new_review {
+    background-color: white;
+}
+
+.reviews_img {
+    
+}
+
+.to_learn_more_caption {
+    font-size: 18px;
+    color: #7AABA2;
+    font-style: normal;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 4px;
+    text-transform: uppercase;
+    float: right;
+
+    margin-top: 32px;
+}
+
+
+.to_learn_more_caption_mobile {
+    font-size: 18px;
+    color: #7AABA2;
+    font-style: normal;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 32px;
+}

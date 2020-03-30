@@ -1,0 +1,28 @@
+﻿.w3-left, .w3-right, .w3-badge {
+    cursor: pointer;
+}
+
+.w3-badge {
+    height: 10px;
+    width: 10px;
+    padding: 0;
+}
+
+.w3-white {
+    color: #000 !important;
+    background-color: transparent !important;
+    height: 13px;
+    width: 13px;
+}
+
+.visible_slide {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hidden_slide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}

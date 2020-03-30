@@ -1,0 +1,11 @@
+﻿.content {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+
+a {
+    color: inherit;
+} 

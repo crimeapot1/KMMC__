@@ -1,0 +1,60 @@
+﻿#version_for_visually_impaired {
+    color: #2A2A2A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #9E9E9C;
+}
+
+.eye_logo {
+    margin-right: 20px;
+}
+
+
+
+@media (min-width: 769px) {
+    .copyright {
+        font-size: 14px;
+        font-style: normal;
+        line-height: 17px;
+        color: #9E9E9C;
+        margin-left: 52px;
+    }
+
+    .copyright_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        display: none;
+    }
+
+    .copyright_mobile {
+        font-size: 14px;
+        font-style: normal;
+        line-height: 17px;
+        color: #9E9E9C;
+    }
+}
+
+
+
+
+
+.social_net_logo {
+    margin-right: 22.296px;
+}
+
+
+
+@media (max-width: 1366px) {
+    .version_for_visually_impaired_caption_desktop {
+        display: none;
+    }
+
+    .social_logo {
+        display: none;
+    }
+}

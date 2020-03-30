@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Вопросы-ответы";
+}
+
+<link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
+
+<script>
+    $(function () {
+        $("#question_form").load("/html_content/question_form/question_form.html");
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#content").load("/html_content/ForPatients/FAQ/content.html");
+    });
+    $(function () {
+        $("#content_mobile").load("/html_content/ForPatients/FAQ/content.html");
+    });
+</script>
+
+<div id="submenu" class="submenu">
+    <a asp-area="" asp-controller="Home" asp-action="Index">
+        <img src="~/images/logo/submenu/home.svg" />
+    </a>
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <a class="sub_item" asp-area="" asp-controller="Diagnostics" asp-action="Diagnostics">
+        Пациентам
+    </a>
+
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <div class="sub_item sub">
+        Вопросы-ответы
+    </div>
+</div>
+
+
+<div class="main_page_template_table" id="main_page_template_table">
+
+    <!-- Мобильная версия -->
+
+    <div class="row justify-content-md-center small_text_div_text_page">
+        <div class="col-md-6" style="flex: 0 0 100%;">
+
+            <div id="content_mobile" class="content_mobile">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Десктопная версия -->
+
+    <div class="row justify-content-md-center big_text_div_text_page">
+        <div class="col-md-6" style="vertical-align: middle;
+width: calc(750px + (100vw - 1440px) * 224 / 480);
+flex: 0 0 57%;">
+
+            
+            <div id="content" class="content">
+
+            </div>
+
+
+        </div>
+        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 43%;">
+            <div style="margin-top: 1px;" align="center">
+
+                <div id="question_form">
+
+                </div>
+
+            </div>
+            <br>
+
+        </div>
+    </div>
+</div>

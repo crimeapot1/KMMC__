@@ -1,0 +1,271 @@
+﻿@{
+    ViewData["Title"] = "Лечение";
+}
+
+<link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
+<link rel="stylesheet" href="~/css/List_of_categories/List_of_categories.css" />
+<link rel="stylesheet" href="~/css/Turquoise_rectangle/Turquoise_rectangle.css" />
+
+<style>
+    .green_links {
+        text-align: left;
+    }
+
+    .button {
+        float: left;
+        margin-top: -30px;
+        height: 60px;
+        font-family: LatoWeb;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        float: right;
+    }
+
+    .green_button {
+        background: #7AABA2;
+        color: #FFFFFF;
+        width: 232px;
+        margin-right: 50px;
+    }
+
+    .white_button {
+        width: 249px;
+        background: white;
+        color: black;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        margin-right: 50px;
+        margin-top: -30px;
+    }
+</style>
+
+<script>
+    $(function () {
+        $("#question_form").load("/html_content/question_form/question_form.html");
+    });
+</script>
+
+<div id="submenu" class="submenu">
+    <a asp-area="" asp-controller="Home" asp-action="Index">
+        <img src="~/images/logo/submenu/home.svg" />
+    </a>
+    <img src="~/images/logo/submenu/cdot.svg" class="cdot_in_submenu" />
+
+    <a class="sub_item sub">
+        Лечение
+    </a>
+</div>
+
+<div class="main_page_template_table" id="main_page_template_table">
+
+    <!-- Мобильная версия -->
+
+    <div class="row justify-content-md-center small_text_div_text_page">
+        <div class="col-md-6" style="flex: 0 0 100%;">
+
+            <div id="content_mobile" class="content_mobile">
+
+
+                <p class="treatment_title">
+                    Что мы лечим?
+                </p>
+
+                <div class="list_of_sections_box">
+                    <ul class="list_of_sections">
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Thyroid_disease">
+                                Заболевания щитовидной железы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Visual_diseases">
+                                Заболевания органов зрения
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="ENT_diseases">
+                                Заболевания лор – органов
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Skin_and_sexually_transmitted_diseases">
+                                Кожно-венерические заболевания
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Dental_and_maxillofacial_diseases">
+                                Заболевания зубо-челюстного аппарата
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_cardiovascular_system">
+                                Заболевания сердечно-сосудистой системы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_musculoskeletal_system">
+                                Заболевания опорно–двигательного аппарата
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Allergic_and_immunological_diseases">
+                                Аллергические и иммунологические заболевания
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Allergic_and_immunological_diseases">
+                                Заболевания органов мочевыделительной системы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_gastrointestinal_tract">
+                                Заболевания органов желудочно-кишечного тракта
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Bariatrics">
+                                Бариатрия
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Pelvic_diseases">
+                                Заболевания органов малого таза (матка, яичники, маточные трубы, предстательная железа)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Десктопная версия -->
+
+    <div class="row justify-content-md-center big_text_div_text_page">
+        <div class="col-md-6" style="vertical-align: middle;
+width: calc(750px + (100vw - 1440px) * 224 / 480);
+flex: 0 0 58%;">
+
+
+            <div id="content" class="content">
+
+                <p class="treatment_title">
+                    Что мы лечим?
+                </p>
+
+                <div class="list_of_sections_box">
+                    <ul class="list_of_sections">
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Thyroid_disease">
+                                Заболевания щитовидной железы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Visual_diseases">
+                                Заболевания органов зрения
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="ENT_diseases">
+                                Заболевания лор – органов
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Skin_and_sexually_transmitted_diseases">
+                                Кожно-венерические заболевания
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Dental_and_maxillofacial_diseases">
+                                Заболевания зубо-челюстного аппарата
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_cardiovascular_system">
+                                Заболевания сердечно-сосудистой системы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_musculoskeletal_system">
+                                Заболевания опорно–двигательного аппарата
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Allergic_and_immunological_diseases">
+                                Аллергические и иммунологические заболевания
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Allergic_and_immunological_diseases">
+                                Заболевания органов мочевыделительной системы
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Diseases_of_the_gastrointestinal_tract">
+                                Заболевания органов желудочно-кишечного тракта
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Bariatrics">
+                                Бариатрия
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Treatment" asp-action="Pelvic_diseases">
+                                Заболевания органов малого таза (матка, яичники, маточные трубы, предстательная железа)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button class="green_button button">
+                    Узнать стоимость
+                </button>
+                <button class="white_button button">
+                    Консультация врача
+                </button>
+
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 42%;">
+            <div style="margin-top: 1px;" align="center">
+
+                <div id="question_form">
+                </div>
+
+                <div class="additional_information">
+                    <div class="treatment_title">
+                        График работы клиники
+                    </div>
+
+                    Приём врачей поликлинического отделения КММЦ Святителя Луки,
+                    <br>
+                    по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+                    <br>
+                    Стационар работает круглосуточно. 
+                    <br>
+                    Посещение пациентов с 17:00 до 19:30
+                </div>
+
+                <div class="green_links">
+                    Просмотреть наших врачей &rarr;
+                </div>
+
+            </div>
+            <br>
+
+        </div>
+    </div>
+</div>
+

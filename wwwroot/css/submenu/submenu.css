@@ -1,0 +1,37 @@
+﻿/* Submenu */
+/* ------------------------------------------------------------ */
+
+.submenu {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.cdot_in_submenu {
+    margin-left: 30px;
+}
+
+.sub_item {
+    display: inline-block;
+    margin-left: 30px;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #2A2A2A;
+}
+
+@media (max-width: 768px) {
+    .cdot_in_submenu {
+        margin-left: 10px;
+    }
+
+    .sub_item {
+        margin-left: 10px;
+    }
+}
+
+.sub {
+    color: #9E9E9C;
+}

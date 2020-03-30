@@ -1,0 +1,182 @@
+﻿#rectangle_on_background {
+    position: absolute;
+    top: 0px;
+    height: 473px;
+    background: #77957D;
+}
+
+@media (min-width: 1366px) {
+    #rectangle_on_background {
+        width: calc(591px + (100vw - 1366px) * 1 / 75);
+        left: calc(100vw - (591px + (100vw - 1366px) * 1 / 75));
+    }
+}
+
+
+@media (min-width: 1441px) {
+    #rectangle_on_background {
+        width: calc(590px + (100vw - 1441px) * 29.5 / 69);
+        left: calc(100vw - (590px + (100vw - 1441px) * 29.5 / 69));
+    }
+}
+
+
+@media (min-width: 1510px) {
+    #rectangle_on_background {
+        width: calc(619.5px + (100vw - 1510px) * 56 / 100);
+        left: calc(100vw - (619.5px + (100vw - 1510px) * 56 / 100));
+    }
+}
+
+
+@media (min-width: 1610px) {
+    #rectangle_on_background {
+        width: calc(675.5px + (100vw - 1610px) * 30 / 100);
+        left: calc(100vw - (675.5px + (100vw - 1610px) * 30 / 100));
+    }
+}
+
+
+@media (min-width: 1710px) {
+    #rectangle_on_background {
+        width: calc(705.5px + (100vw - 1710px) * 30 / 70);
+        left: calc(100vw - (705.5px + (100vw - 1710px) * 30 / 70));
+    }
+}
+
+
+@media (min-width: 1780px) {
+    #rectangle_on_background {
+        width: calc(735.5px + (100vw - 1780px) * 39.930929626 / 70);
+        left: calc(100vw - (735.5px + (100vw - 1780px) * 39.930929626 / 70));
+    }
+}
+
+@media (min-width: 1850px) {
+    #rectangle_on_background {
+        width: calc(775.430929626px + (100vw - 1850px) * 15.569070374 / 70);
+        left: calc(100vw - (775.430929626px + (100vw - 1850px) * 15.569070374 / 70));
+    }
+}
+
+#gray_rect_on_background {
+    width: 100%;
+    background: #E5E5E5;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}   
+
+#gray_rect_background_of_question_form {
+    width: calc(591px + (100vw - 1440px) * (617 - 591) / 480);
+    height: calc(355px + (100vw - 1440px) * (462 - 355) / 480);
+    background: #F0F0F0;
+    position: absolute;
+    left: calc(849px + (100vw - 1440px) * (1129 - 849) / 480);
+    top: calc(121px + (100vw - 1440px) * (161 - 121) / 480);
+}
+
+@media (min-width: 769px) and (max-width: 1365px) {
+    #gray_rect_background_of_question_form {
+        width: calc(554px + (100vw - 769px) * (586 - 554) / (1365 - 769));
+        left: calc(457px + (100vw - 769px) * (805 - 457) / (1365 - 769));
+    }
+}
+
+@media (max-width: 768px) {
+    #gray_rect_background_of_question_form {
+        display: none;
+    }
+}
+
+@media (min-width: 1921px) {
+    #gray_rect_background_of_question_form {
+        width: 617px;
+        height: 462px;
+    }
+}
+
+
+@media (min-width: 1921px) {
+    #gray_rect_background_of_question_form {
+        top: 161px;
+    }
+}
+
+
+
+
+@media (min-width: 1366px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (591px + (100vw - 1366px) * 1 / 75));
+    }
+}
+
+
+@media (min-width: 1441px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (590px + (100vw - 1441px) * 29.5 / 69));
+    }
+}
+
+
+@media (min-width: 1510px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (619.5px + (100vw - 1510px) * 56 / 100));
+    }
+}
+
+
+@media (min-width: 1610px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (675.5px + (100vw - 1610px) * 30 / 100));
+    }
+}
+
+
+@media (min-width: 1710px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (705.5px + (100vw - 1710px) * 30 / 70));
+    }
+}
+
+
+@media (min-width: 1780px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (735.5px + (100vw - 1780px) * 39.930929626 / 70));
+    }
+}
+
+@media (min-width: 1850px) {
+    #gray_rect_background_of_question_form {
+        left: calc(100vw - (775.430929626px + (100vw - 1850px) * 15.569070374 / 70));
+    }
+}
+
+
+
+#gray_rect_on_background {
+    width: 100%;
+    background: #E5E5E5;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1365) {
+    #gray_rect_background_of_question_form {
+        display: none;
+    }
+}
