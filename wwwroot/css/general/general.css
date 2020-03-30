@@ -225,6 +225,12 @@
     color: #2A2A2A;
 }
 
+@media (min-width: 1921px) {
+    .content_title {
+        font-size: calc(24px + (100vw - 1921px) * (40 - 24) / (2560 - 1920));
+    }
+}
+
 
 
 .navigation_indexes {

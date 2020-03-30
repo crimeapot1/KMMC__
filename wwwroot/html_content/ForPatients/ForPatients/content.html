@@ -12,6 +12,18 @@
         color: #2A2A2A;
     }
 
+    @media (min-width: 1441px) {
+        .text {
+            font-size: calc(16px + (100vw - 1441px) * (20 - 16) / (1920 - 1441));
+        }
+    }
+
+    @media (min-width: 1921px) {
+        .text {
+            font-size: calc(20px + (100vw - 1921px) * (30 - 20) / (2560 - 1921));
+        }
+    }
+
     a {
         color: #7AABA2;
     }
