@@ -4,12 +4,42 @@
 
 <link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
 
+<style>
+    .text {
+        font-family: Latoweb;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        color: #2A2A2A;
+    }
+
+    @@media (min-width: 1441px) {
+        .text {
+            font-size: calc(16px + (100vw - 1441px) * (20 - 16) / (1920 - 1441));
+        }
+    }
+
+    @@media (min-width: 1921px) {
+        .text {
+            font-size: calc(20px + (100vw - 1921px) * (30 - 20) / (2560 - 1921));
+        }
+    }
+
+    a {
+        color: #7AABA2;
+    }
+</style>
+
 <script>
     $(function () {
         $("#content").load("/html_content/ForPatients/ForPatients/content.html");
     });
     $(function () {
         $("#content_mobile").load("/html_content/ForPatients/ForPatients/content.html");
+    });
+    $(function () {
+        $("#additional_content_desktop").load("/html_content/ForPatients/ForPatients/additional_content.html");
     });
 </script>
 
@@ -37,7 +67,6 @@
             </div>
 
             <div id="content_mobile" class="content_mobile">
-
             </div>
 
         </div>
@@ -48,17 +77,35 @@
     <div class="row justify-content-md-center big_text_div_text_page">
         <div class="col-md-6">
 
-
             <div id="content" class="content">
-
             </div>
 
-
         </div>
-        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;">
+        <div class="col-md-6 big_slider_div_text_page">
             <div style="margin-top: 1px;" align="right">
 
                 <img src="~/images/Content/For_Patients/image_1.png" style="width: 97%;" />
+
+                <style>
+                    @@media (min-width: 769px) {
+                        .div_with_margin_top_above_img {
+                            margin-top: 5px;
+                        }
+                    }
+                    @@media (min-width: 1440px) {
+                        .div_with_margin_top_above_img {
+                            margin-top: calc(10px + (100vw - 1440px) * (50 - 10) / (1920 - 1440));
+                        }
+                    }
+                     @@media (min-width: 1921px) {
+                        .div_with_margin_top_above_img {
+                            margin-top: 50px;
+                        }
+                    }
+                </style>
+
+                <div id="additional_content_desktop" align="left" style="width: 97%;" class="text div_with_margin_top_above_img">
+                </div>
 
             </div>
             <br>
