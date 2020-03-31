@@ -6,8 +6,20 @@
     margin-bottom: 20px;
 }
 
+@media (min-width: 1921px) {
+    .submenu {
+        margin-top: calc(100px + (100vw - 1921px) \* (120 - 100) / (2560 - 1920));
+    }
+}
+
 .cdot_in_submenu {
     margin-left: 30px;
+}
+
+@media (min-width: 1921px) {
+    .cdot_in_submenu {
+        width: calc(3px + (100vw - 1921px) * (9 - 3) / (2560 - 1921));
+    }
 }
 
 .sub_item {
@@ -35,3 +47,13 @@
 .sub {
     color: #9E9E9C;
 }
+
+
+
+@media (min-wdith: 1921px) {
+    .home_icon {
+        width: calc(16px + (100vw - 1921px) * (35 - 16) / (1921 - 2560));
+    }
+}
+    
+    
