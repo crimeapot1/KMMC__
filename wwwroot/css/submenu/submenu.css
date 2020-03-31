@@ -8,7 +8,7 @@
 
 @media (min-width: 1921px) {
     .submenu {
-        margin-top: calc(100px + (100vw - 1921px) \* (120 - 100) / (2560 - 1920));
+        margin-top: calc(100px + (100vw - 1921px) * (120 - 100) / (2560 - 1920));
     }
 }
 
@@ -34,6 +34,12 @@
     color: #2A2A2A;
 }
 
+@media (min-width: 1921px) {
+    .sub_item {
+        font-size: calc(19px + (100vw - 1921px) * (25 - 19) / (2560 - 1921));
+    }
+}
+
 @media (max-width: 768px) {
     .cdot_in_submenu {
         margin-left: 10px;
@@ -49,10 +55,13 @@
 }
 
 
+.home_icon {
+    width: 17px;
+}
 
-@media (min-wdith: 1921px) {
+@media (min-width: 1921px) {
     .home_icon {
-        width: calc(16px + (100vw - 1921px) * (35 - 16) / (1921 - 2560));
+        width: calc(17px + (100vw - 1921px) * (35 - 17) / (2560 - 1921));
     }
 }
     
