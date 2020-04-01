@@ -1,7 +1,10 @@
 ﻿function hide_main_content() {
     var x = document.getElementById("submenu");
-    x.style.display = "none";
 
+    if (x !== null) {
+        x.style.display = "none";
+    }
+    
     x = document.getElementById("main_page_template_table");
     x.style.display = "none";
 
@@ -29,7 +32,9 @@
 
 function show_main_content(x) {
     var x = document.getElementById("submenu");
-    x.style.display = "none";
+    if (x !== null) {
+        x.style.display = "block";
+    }
 
     x = document.getElementById("main_page_template_table");
     x.style.display = "block";
