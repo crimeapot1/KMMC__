@@ -170,8 +170,14 @@
     <header>
         <nav id="main_menu" class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3">
             <div class="container">
-                <img src="~/images/logo/LOGOTIP_KMMTs.svg" id="KMMTs_logo" class="KMMTs_logo" />
-                <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo" class="kfu_logo" />
+
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo/LOGOTIP_KMMTs.svg" id="KMMTs_logo" class="KMMTs_logo" />
+                </a>
+
+                <a href="https://cfuv.ru/">
+                    <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo" class="kfu_logo" />
+                </a>
 
                 <button id="navbar-toggler" onclick="Show_Hide_Body()" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
@@ -194,8 +200,9 @@
                     <button id="making_an_appointment_button" onclick="Hide_Fixed_Main_Menu()" class="making_an_appointment_button">ЗАПИСАТЬСЯ НА ПРИЕМ</button>
                 </div>
 
-
-                <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo_mobile" class="kfu_logo_mobile" />
+                <a href="https://cfuv.ru/" class="kfu_logo_mobile">
+                    <img src="~/images/logo/LOGOTIP_KFU.svg" id="kfu_logo_mobile" class="kfu_logo_mobile" />
+                </a>
 
                 <div id="navbar-collapse" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
