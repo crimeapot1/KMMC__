@@ -82,6 +82,7 @@
     margin-right: 27.25px;
     vertical-align: top;
     margin-top: 23px;
+    visibility: hidden;
 }
 
 @media (min-width: 1440px) {
@@ -100,6 +101,7 @@
     vertical-align: top;
     margin-top: 26px;
     margin-right: 26px;
+    visibility: hidden;
 }
 
 @media (min-width: 1440px) {
@@ -138,6 +140,7 @@
     line-height: 19px;
     vertical-align: top;
     margin-top: 23px;
+    visibility: hidden;
 }
 
 @media (max-width: 1365.2px) {
