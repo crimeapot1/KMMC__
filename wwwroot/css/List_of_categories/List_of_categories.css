@@ -12,13 +12,14 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 
-    padding-top: 55px;
-    padding-bottom: 55px;
+    
 }
 
 @media (min-width: 1440px) {
     .list_of_sections_box {
         padding-left: calc(25px + (100vw - 1440px) * 25 / 480);
+        padding-top: calc(33px + (100vw - 1440px) * (57 - 33) / (1920 - 1440));
+        padding-bottom: calc(33px + (100vw - 1440px) * (68 - 33) / (1920 - 1440));
     }
 }   
 
@@ -42,7 +43,7 @@ a:hover {
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom: calc(20px + (100vw - 1440px) * (30 - 20) / (1920 - 1440));
 }
 
 

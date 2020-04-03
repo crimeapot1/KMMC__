@@ -45,6 +45,9 @@
     $(function () {
         $("#question_form").load("/html_content/question_form/question_form.html");
     });
+    $(function () {
+        $("#question_form_mobile").load("/html_content/question_form/question_form.html");
+    });
 </script>
 
 <div id="submenu" class="submenu">
@@ -58,6 +61,33 @@
     </a>
 </div>
 
+
+<div id="gray_rect_background_of_question_form">
+</div>
+
+<div id="question_form">
+</div>
+
+<div class="additional_information">
+    <div class="treatment_title">
+        График работы клиники
+    </div>
+
+    Приём врачей поликлинического отделения КММЦ Святителя Луки,
+    <br>
+    по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+    <br>
+    Стационар работает круглосуточно.
+    <br>
+    Посещение пациентов с 17:00 до 19:30
+
+    <div class="green_links">
+        Просмотреть наших врачей &rarr;
+    </div>
+</div>
+
+
+
 <div class="main_page_template_table" id="main_page_template_table">
 
     <!-- Мобильная версия -->
@@ -66,8 +96,6 @@
         <div class="col-md-6" style="flex: 0 0 100%;">
 
             <div id="content_mobile" class="content_mobile">
-
-
                 <p class="treatment_title">
                     Что мы лечим?
                 </p>
@@ -137,7 +165,62 @@
                     </ul>
                 </div>
 
+                <div>
+                    <button class="green_button button">
+                        Узнать стоимость
+                    </button>
 
+                    <button class="white_button button">
+                        Консультация врача
+                    </button>
+                </div>
+
+
+                <div id="question_form_mobile">
+                </div>
+
+                <div class="schedule">
+                    <div class="title_18">
+                        ГРАФИК РАБОТЫ КЛИНИКИ
+                    </div>
+                    <div class="text_16">
+                        Приём врачей поликлинического отделения КММЦ Святителя Луки,
+                        <br>
+                        по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+                        <br>
+                        Стационар работает круглосуточно.
+                        <br>
+                        Посещение пациентов с 17:00 до 19:30.
+                    </div>
+                    <br>
+
+                    <style>
+                        @@media (min-width: 1366px) and (max-width: 1920px) {
+                            .margin_top_to_learn_more_caption_mobile {
+                                margin-top: calc(10px - (100vw - 1366px) * 10 / (1920 - 1366));
+                            }
+                        }
+
+                        @@media (min-width: 1921px) {
+                            .margin_top_to_learn_more_caption_mobile {
+                                margin-top: 0px;
+                            }
+                        }
+
+                        .to_learn_more_caption_mobile {
+                            margin-top: calc(14px + (100vw - 320px) * (18 - 14) / (768 - 320));
+                        }
+                    </style>
+
+                    <a href="" class="to_learn_more_caption_mobile">
+                        УЗНАТЬ БОЛЬШЕ &rarr;
+                    </a>
+                    <br>
+                    <a href="" class="to_learn_more_caption_mobile">
+                        ПЕРЕЙТИ К ВОПРОСЫ — ОТВЕТЫ &rarr;
+                    </a>
+
+                </div>
 
             </div>
 
@@ -150,7 +233,6 @@
         <div class="col-md-6" style="vertical-align: middle;
 width: calc(750px + (100vw - 1440px) * 224 / 480);
 flex: 0 0 58%;">
-
 
             <div id="content" class="content">
 
@@ -231,40 +313,11 @@ flex: 0 0 58%;">
                     Консультация врача
                 </button>
 
-
-
-
             </div>
 
 
         </div>
         <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 42%;">
-            <div style="margin-top: 1px;" align="center">
-
-                <div id="question_form">
-                </div>
-
-                <div class="additional_information">
-                    <div class="treatment_title">
-                        График работы клиники
-                    </div>
-
-                    Приём врачей поликлинического отделения КММЦ Святителя Луки,
-                    <br>
-                    по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
-                    <br>
-                    Стационар работает круглосуточно. 
-                    <br>
-                    Посещение пациентов с 17:00 до 19:30
-                </div>
-
-                <div class="green_links">
-                    Просмотреть наших врачей &rarr;
-                </div>
-
-            </div>
-            <br>
-
         </div>
     </div>
 </div>
