@@ -2,7 +2,7 @@
     .list_of_reviews {
         background: #FFFFFF;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-        width: 841px;
+        width: calc(709px + (100vw - 1440px) * (841 - 709) / (1920 - 1440));
         height: 500px;
         font-family: LatoWeb;
         font-style: normal;
@@ -14,7 +14,6 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 64px;
-
         float: right;
         margin-top: 20px;
     }

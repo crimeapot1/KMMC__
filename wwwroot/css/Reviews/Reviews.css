@@ -2,8 +2,10 @@
     background-color: white;
 }
 
-.reviews_img {
-    
+@media (min-width: 1440px) {
+    .reviews_img {
+        width: calc(580px + (100vw - 1440px) * (890 - 580) / (1920 - 1440));
+    }
 }
 
 .to_learn_more_caption {
@@ -28,4 +30,58 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 32px;
+}
+
+.review_page_left_part {
+    flex: 0 0 43%;
+}
+
+.review_page_right_part {
+    flex: 0 0 50%;
+}
+
+@media (min-width: 1503px) {
+    .review_page_left_part {
+        flex: 0 0 47%;
+    }
+
+    .review_page_right_part {
+        flex: 0 0 53%;
+    }
+}
+
+@media (min-width: 1535px) {
+    .review_page_left_part {
+        flex: 0 0 48%;
+    }
+    .review_page_right_part {
+        flex: 0 0 52%;
+    }
+}
+
+@media (min-width: 1696px) {
+    .review_page_left_part {
+        flex: 0 0 52%;
+    }
+    .review_page_right_part {
+        flex: 0 0 48%;
+    }
+}
+
+@media (min-width: 2106px) {
+    .review_page_left_part {
+        flex: 0 0 55%;
+    }
+    .review_page_right_part {
+        flex: 0 0 45%;
+    }
+}
+
+@media (min-width: 2285px) {
+    .review_page_left_part {
+        flex: 0 0 50%;
+    }
+    .review_page_right_part {
+        flex: 0 0 50%;
+    }
 }
