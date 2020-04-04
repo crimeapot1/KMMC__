@@ -19,7 +19,7 @@
     .list_of_sections_box {
         padding-left: calc(25px + (100vw - 1440px) * 25 / 480);
         padding-top: calc(33px + (100vw - 1440px) * (57 - 33) / (1920 - 1440));
-        padding-bottom: calc(33px + (100vw - 1440px) * (68 - 33) / (1920 - 1440));
+        padding-bottom: calc(20px + (100vw - 1440px) * (58 - 20) / (1920 - 1440));
     }
 }   
 
@@ -31,6 +31,12 @@
     line-height: 150%;
     text-transform: uppercase;
     color: #2A2A2A;
+}
+
+@media (min-width: 1921px) {
+    .list_of_sections {
+        font-size: calc(14px + (100vw - 1921px) * (20 - 14) / (2560 - 1921));
+    }
 }
 
 a {

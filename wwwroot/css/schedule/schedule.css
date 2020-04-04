@@ -1,10 +1,35 @@
-﻿@media (min-width: 1366px) {
+﻿.schedule {
+    font-size: 16px;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2A2A2A;
+}
+
+@media (min-width: 1366px) {
     .schedule {
         margin-top: calc(20px + (100vw - 1366px) * (50 - 20) / (1920 - 1366));
     }
 }
+
 @media (max-width: 768px) {
     .schedule {
         margin-top: 30px;
     }
+}
+
+.shedule_title {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 18px;
+}
+
+.shedule_text {
+    margin-top: 10px;
 }

@@ -35,10 +35,6 @@
     padding-bottom: 30px;
 }
 
-#question_form {
-    position: absolute;
-}
-
 @media (max-width: 768px) {
     #question_form {
         display: none;
@@ -48,6 +44,7 @@
 @media (min-width: 1366px) {
     .question_form {
         width: calc(541px + (100vw - 1366px) * (587 - 541) / 480);
+        margin-top: calc(11px + (100vw - 1366px) * (30 - 11) / (1920 - 1366));
     }
 }
 
@@ -58,67 +55,6 @@
 }
 
 /* ------------------------------------------------------------------------------------ */
-
-@media (min-width: 769px) {
-    #question_form {
-        top: calc(151px + (100vw - 1366px) * (191 - 151) / 480);
-        left: calc(184px + (100vw - 769px) * (774 - 184) / (1365 - 769) );
-    }
-}
-
-@media (min-width: 1366px) {
-    #question_form {
-        top: calc(151px + (100vw - 1366px) * (191 - 151) / 480);
-        left: calc(100vw - (591px + (100vw - 1366px) * 1 / 75));
-    }
-}
-
-@media (min-width: 1921px) {
-    #question_form {
-        top: 191px;
-    }
-}
-
-
-@media (min-width: 1441px) {
-    #question_form {
-        left: calc(100vw - (590px + (100vw - 1441px) * 29.5 / 69));
-    }
-}
-
-
-@media (min-width: 1510px) {
-    #question_form {
-        left: calc(100vw - (619.5px + (100vw - 1510px) * 56 / 100));
-    }
-}
-
-
-@media (min-width: 1610px) {
-    #question_form {
-        left: calc(100vw - (675.5px + (100vw - 1610px) * 30 / 100));
-    }
-}
-
-
-@media (min-width: 1710px) {
-    #question_form {
-        left: calc(100vw - (705.5px + (100vw - 1710px) * 30 / 70));
-    }
-}
-
-
-@media (min-width: 1780px) {
-    #question_form {
-        left: calc(100vw - (735.5px + (100vw - 1780px) * 39.930929626 / 70));
-    }
-}
-
-@media (min-width: 1850px) {
-    #question_form {
-        left: calc(100vw - (775.430929626px + (100vw - 1850px) * 15.569070374 / 70));
-    }
-}
 
 @media (max-width: 670px) {
     #question_form_mobile {
@@ -197,11 +133,6 @@
 
 
 /* ------------------------------------------------------------ */
-.additional_information {
-    text-align: left;
-    font-size: 16px;
-    margin-left: 30px;
-}
 
 .green_links {
     font-family: LatoWeb;
@@ -211,6 +142,13 @@
     line-height: 22px;
     text-transform: uppercase;
     color: #7AABA2;
+    margin-top: calc(10px - (100vw - 1440px) * (10 - 4) / (1920 - 1440));
+}
+
+@media (min-width: 1921px) {
+    .green_links {
+        margin-top: 15px;
+    }
 }
 
 /* ------------------------------------------------------------ */
@@ -412,3 +350,7 @@
     }
 }
 
+
+
+
+/* ---------------------------------------- */

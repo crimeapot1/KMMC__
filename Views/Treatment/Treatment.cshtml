@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
 <link rel="stylesheet" href="~/css/List_of_categories/List_of_categories.css" />
 <link rel="stylesheet" href="~/css/Turquoise_rectangle/Turquoise_rectangle.css" />
+<link rel="stylesheet" href="~/css/schedule/schedule.css" />
+<link rel="stylesheet" href="~/css/right_part_content_flush_background_rect/right_part_content_flush_background_rect.css" />
 
 <style>
     .green_links {
@@ -39,6 +41,18 @@
         margin-right: 50px;
         margin-top: -30px;
     }
+
+    @@media (min-width: 1440px) {
+        .footer {
+            margin-top: 0px;
+        }
+    }
+
+    @@media (min-width: 1440px) {
+        .content {
+            height: calc(570px + (100vw - 1440px) * (650 - 570) / 480);
+        }
+    }
 </style>
 
 <script>
@@ -65,28 +79,32 @@
 <div id="gray_rect_background_of_question_form">
 </div>
 
-<div id="question_form">
-</div>
 
-<div class="additional_information">
-    <div class="treatment_title">
-        График работы клиники
+<div id="right_part_content_flush_background_rect">
+    <div id="question_form">
     </div>
 
-    Приём врачей поликлинического отделения КММЦ Святителя Луки,
-    <br>
-    по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
-    <br>
-    Стационар работает круглосуточно.
-    <br>
-    Посещение пациентов с 17:00 до 19:30
-
-    <div class="green_links">
-        Просмотреть наших врачей &rarr;
+    <div class="schedule">
+        <div class="shedule_title">
+            График работы клиники
+        </div>
+        <div class="shedule_text">
+            Приём врачей поликлинического отделения КММЦ Святителя Луки,
+            <br>
+            по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+            <br>
+            Стационар работает круглосуточно.
+            <br>
+            Посещение пациентов с 17:00 до 19:30
+        </div>
+        <div class="green_links">
+            Просмотреть наших врачей &rarr;
+        </div>
+        <div class="green_links">
+            Перейти к вопросы — Ответы &rarr;
+        </div>
     </div>
 </div>
-
-
 
 <div class="main_page_template_table" id="main_page_template_table">
 

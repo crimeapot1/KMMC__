@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="~/css/Turquoise_rectangle/Turquoise_rectangle.css" />
 <link rel="stylesheet" href="~/css/schedule/schedule.css" />
 
+<link rel="stylesheet" href="~/css/right_part_content_flush_background_rect/right_part_content_flush_background_rect.css" />
+
 <style>
     .button {
         float: left;
@@ -25,7 +27,6 @@
         background: #7AABA2;
         color: #FFFFFF;
         width: 232px;
-        
     }
 
     @@media (min-width: 671px) {
@@ -60,10 +61,23 @@
         .white_button {
             display: block;
             width: 250px;
-
             margin-top: 20px;
             margin-right: calc(50vw - 125px - 20px);
         }
+    }
+
+    @@media (min-width: 1440px) {
+        .content {
+            height: calc(570px + (100vw - 1440px) * (650 - 570) / 480);
+        }
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+
+    .big_text_div_text_page {
+        margin-bottom: 0px;
     }
 </style>
 
@@ -90,7 +104,30 @@
 <div id="gray_rect_background_of_question_form">
 </div>
 
-<div id="question_form">
+<div id="right_part_content_flush_background_rect">
+    <div id="question_form">
+    </div>
+
+    <div class="schedule">
+        <div class="shedule_title">
+            График работы клиники
+        </div>
+        <div class="shedule_text">
+            Приём врачей поликлинического отделения КММЦ Святителя Луки,
+            <br>
+            по адресу: г. Симферополь, бул. Ленина 5/7 с 8:00 до 19:30
+            <br>
+            Стационар работает круглосуточно.
+            <br>
+            Посещение пациентов с 17:00 до 19:30
+        </div>
+        <div class="green_links">
+            Просмотреть наших врачей &rarr;
+        </div>
+        <div class="green_links">
+            Перейти к вопросы — Ответы &rarr;
+        </div>
+    </div>
 </div>
 
 <div class="main_page_template_table" id="main_page_template_table">
@@ -239,7 +276,7 @@
         width: calc(750px + (100vw - 1366px) * 224 / 480);
         flex: 0 0 55%;">
 
-            <div id="content" class="content" style="height: 550px;">
+            <div id="content" class="content">
                 <p class="treatment_title">
                     Диагностика
                 </p>
@@ -303,7 +340,7 @@
 
             </div>
         </div>
-        <div class="col-md-6 big_slider_div_text_page" style="padding-bottom: 65px;  flex: 0 0 45%;">
+        <div class="col-md-6 big_slider_div_text_page" style="flex: 0 0 45%;">
         </div>
     </div>
 </div>
