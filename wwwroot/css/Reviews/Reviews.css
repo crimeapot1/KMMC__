@@ -8,6 +8,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .reviews_img {
+        width: 100%;
+    }
+}
+
 .to_learn_more_caption {
     font-size: 18px;
     color: #7AABA2;
@@ -99,7 +105,7 @@
 .list_of_reviews {
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-    width: calc(709px + (100vw - 1440px) * (841 - 709) / (1920 - 1440));
+    
     /*height: 500px;*/
     font-family: LatoWeb;
     font-style: normal;
@@ -115,7 +121,7 @@
     margin-top: 20px;
 }
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .list_of_reviews {
         width: 100%;
     }
