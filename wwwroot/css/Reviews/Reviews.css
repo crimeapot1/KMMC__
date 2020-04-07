@@ -84,3 +84,10 @@
         flex: 0 0 50%;
     }
 }
+
+
+@media (max-width: 768px) {
+    .margin_top_20_14 {
+        margin-top: calc(20px - (100vw - 320px) * (14 - 20) / (768 - 320)); /* именно так! */
+    }
+}

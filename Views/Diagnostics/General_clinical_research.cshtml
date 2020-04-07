@@ -216,7 +216,7 @@
 
     function Show_Next_Slide_big(dots, x, slideIndex_big) {
         x[window.prev_index_big].style.display = 'none';
-        x[slideIndex_small].style.display = "block";
+        x[slideIndex_big].style.display = "block";
 
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" w3-white", "");
@@ -224,7 +224,7 @@
 
         dots[slideIndex_big].className += " w3-white";
 
-        window.prev_index_big = slideIndex_small;
+        window.prev_index_big = slideIndex_big;
     }
 
     function showDivs_small(n) {

@@ -4,24 +4,19 @@
 
 <link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
 <link rel="stylesheet" href="~/css/Reviews/Reviews.css" />
+<link rel="stylesheet" href="../css/slider/slider.css" />
 
 <style>
     /* Hide scrollbar for Chrome, Safari and Opera */
     .content::-webkit-scrollbar {
-      display: none;
+        display: none;
     }
 
     /* Hide scrollbar for IE and Edge */
     .content {
-      -ms-overflow-style: none;
+        -ms-overflow-style: none;
     }
 </style>
-
-<script>
-    $(function () {
-        $("#list_of_reviews").load("/html_content/list_of_reviews/list_of_reviews.html");
-    });
-</script>
 
 <div id="submenu" class="submenu">
     <a asp-area="" asp-controller="Home" asp-action="Index">
@@ -42,6 +37,58 @@
         <div class="col-md-6" style="flex: 0 0 100%;">
 
             <div id="content_mobile" class="content_mobile">
+            </div>
+
+            <div id="list_of_reviews_mobile">
+
+                <script>
+                    $(function () {
+                        $("#review_1_mobile").load("/html_content/list_of_reviews/review_1.html");
+                    });
+                    $(function () {
+                        $("#review_2_mobile").load("/html_content/list_of_reviews/review_2.html");
+                    });
+                    $(function () {
+                        $("#review_3_mobile").load("/html_content/list_of_reviews/review_3.html");
+                    });
+                    $(function () {
+                        $("#review_4_mobile").load("/html_content/list_of_reviews/review_4.html");
+                    });
+                    $(function () {
+                        $("#review_5_mobile").load("/html_content/list_of_reviews/review_5.html");
+                    });
+                    $(function () {
+                        $("#review_6_mobile").load("/html_content/list_of_reviews/review_6.html");
+                    });
+                </script>
+
+
+                <div class="w3-content w3-display-container" style="width: auto; z-index: -1;">
+
+                    <div id="review_1_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_2_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_3_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_4_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_5_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_6_mobile" class="mySlides mySlides_small" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+
+                </div>
+
+                <button class="green_button button">
+                    Оставить отзыв
+                </button>
+
+                <button class="white_button button">
+                    Следующий отзыв
+                </button>
+
+
             </div>
 
         </div>
@@ -75,11 +122,250 @@
         </div>
         <div class="col-md-6 big_slider_div_text_page text_page_desktop_right_part review_page_right_part" sstyle="padding-bottom: 65px;">
 
-                <div id="list_of_reviews">
+            <div id="list_of_reviews">
+
+
+                <style>
+                    .list_of_reviews {
+                        background: #FFFFFF;
+                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+                        width: calc(709px + (100vw - 1440px) * (841 - 709) / (1920 - 1440));
+                        /*height: 500px;*/
+                        font-family: LatoWeb;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #2A2A2A;
+                        padding-top: 30px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        padding-bottom: 64px;
+                        float: right;
+                        margin-top: 20px;
+                    }
+
+                    @@media (max-width: 768px) {
+                        .list_of_reviews {
+                            width: 100%;
+                        }
+                    }
+
+                    .button {
+                        float: left;
+                        margin-top: -30px;
+                        width: 250px;
+                        height: 60px;
+                        font-family: LatoWeb;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        border: none;
+
+                        z-index: 3;
+                    }
+
+                    .green_button {
+                        background: #7AABA2;
+                        color: #FFFFFF;
+                        margin-right: calc(250px + 241px + 30px);
+                        float: right;
+                    }
+
+                    .white_button {
+                        background: white;
+                        color: black;
+                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+                        margin-right: 241px;
+                        float: right;
+                        margin-top: -60px;
+                    }
+
+                    .date {
+                        font-family: LatoWeb;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #9E9E9C;
+                        background: #FFFFFF;
+                    }
+
+
+                    /* --------------------------------------- */
+
+                    @@media (min-width: 671px) and (max-width: 768px) {
+                        .green_button {
+                            margin-right: 50px;
+                        }
+                    }
+
+                    @@media (max-width: 670px) {
+                        .green_button {
+                            width: 250px;
+                            margin-right: calc(50vw - 125px - 20px);
+                        }
+                    }
+
+                    @@media (max-width: 768px) {
+                        .white_button {
+                            width: 249px;
+                            background: white;
+                            color: black;
+                            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+                            margin-right: 50px;
+                            margin-top: -30px;
+                        }
+                    }
+
+                    @@media (min-width: 671px) and (max-width: 678px) {
+                        .white_button {
+                            margin-right: 50px;
+                        }
+                    }
+
+                    @@media (max-width: 670px) {
+                        .white_button {
+                            display: block;
+                            width: 250px;
+                            margin-top: 20px;
+                            margin-right: calc(50vw - 125px - 20px);
+                        }
+                    }
+
+
+                </style>
+
+                <div align="right">
+                    <button style="background: transparent; border: 0px;" onclick="Shift_Left_Slider()"> <img src="../images/logo/Doctors/left_arrow.svg" style="display: inline-block; margin-right: 20px; margin-top: -12px;" /> </button>
+                    <div id="index_navigation_doctors" class="navigation_indexes" style="display: inline-block;">
+                        5 / 8
+                    </div>
+                    <button style="background: transparent; border: 0px;" onclick="Shift_Right_Slider()"> <img src="../images/logo/Doctors/right_arrow.svg" style="display: inline-block; margin-left: 20px;" /> </button>
                 </div>
 
-            <br>
+                <script>
+                    $(function () {
+                        $("#review_1").load("/html_content/list_of_reviews/review_1.html");
+                    });
+                    $(function () {
+                        $("#review_2").load("/html_content/list_of_reviews/review_2.html");
+                    });
+                    $(function () {
+                        $("#review_3").load("/html_content/list_of_reviews/review_3.html");
+                    });
+                    $(function () {
+                        $("#review_4").load("/html_content/list_of_reviews/review_4.html");
+                    });
+                    $(function () {
+                        $("#review_5").load("/html_content/list_of_reviews/review_5.html");
+                    });
+                    $(function () {
+                        $("#review_6").load("/html_content/list_of_reviews/review_6.html");
+                    });
+                </script>
+
+                <div class="w3-content w3-display-container" style="width: auto;">
+
+                    <div id="review_1" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_2" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_3" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_4" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_5" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+                    <div id="review_6" class="mySlides mySlides_big" style="max-height: 700px; max-width: 1049px;">
+                    </div>
+
+                </div>
+
+                <button class="white_button button" style="background-color: #7AABA2;">
+                    Оставить отзыв
+                </button>
+
+                <button class="green_button button" style="background-color: white;">
+                    Следующий отзыв
+                </button>
+
+            </div>
 
         </div>
     </div>
 </div>
+
+
+
+<script>
+    window.prev_index_small = 0;
+    window.prev_index_big = 0;
+
+    var slideIndex_small = 0;
+    var slideIndex_big = 0;
+
+    showDivs_small(slideIndex_small);
+    showDivs_big(slideIndex_big);
+
+    function plusDivs_small(n) {
+        showDivs_small(slideIndex_small += n);
+    }
+
+    function plusDivs_big(n) {
+        showDivs_big(slideIndex_big += n);
+    }
+
+    function currentDiv_small(n) {
+        showDivs_small(slideIndex_small = n);
+    }
+
+    function currentDiv_big(n) {
+        showDivs_big(slideIndex_big = n);
+    }
+
+    function Show_Next_Slide_small(x, slideIndex_small) {
+        x[window.prev_index_small].style.display = 'none';
+        x[slideIndex_small].style.display = "block";
+
+        window.prev_index_small = slideIndex_small;
+    }
+
+    function Show_Next_Slide_big(x, slideIndex_big) {
+        x[window.prev_index_big].style.display = 'none';
+        x[slideIndex_big].style.display = "block";
+
+        window.prev_index_big = slideIndex_big;
+    }
+
+    function showDivs_small(n) {
+        var x = document.getElementsByClassName("mySlides_small");
+        if (n == x.length) { slideIndex_small = 0 }
+
+        x[window.prev_index_small].className = "mySlides_small mySlides hidden_slide";
+        x[slideIndex_small].className = "mySlides_small mySlides visible_slide";
+        setTimeout(Show_Next_Slide_small, 500, x, slideIndex_small);
+    }
+
+    function showDivs_big(n) {
+        var x = document.getElementsByClassName("mySlides_big");
+        if (n == x.length) { slideIndex_big = 0 }
+
+        x[window.prev_index_big].className = "mySlides_big mySlides hidden_slide";
+        x[slideIndex_big].className = "mySlides_big mySlides visible_slide";
+        setTimeout(Show_Next_Slide_big, 500, x, slideIndex_big);
+    }
+
+    function pollFunc(fn) {
+        (function p() {
+            fn(1);
+            setTimeout(p, 10000);
+        })();
+    }
+
+    window.onload = function () {
+        setTimeout(pollFunc, 10000, plusDivs_small);
+        setTimeout(pollFunc, 10000, plusDivs_big);
+    }
+</script>
