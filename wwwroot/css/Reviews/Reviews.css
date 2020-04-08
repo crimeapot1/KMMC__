@@ -208,3 +208,15 @@
         margin-right: calc(50vw - 125px - 20px);
     }
 }
+
+
+
+.green_slider_navigation {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #587D5F;
+}
