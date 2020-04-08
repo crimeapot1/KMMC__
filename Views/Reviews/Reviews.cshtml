@@ -95,22 +95,18 @@
                         Оставить отзыв
                     </button>
 
-                    <button class="white_button button">
+                    <button class="white_button button" onclick="increment_review();">
                         Следующий отзыв
                     </button>
 
                 </div>
 
-                <div style="display: inline-block; margin-top: 30px; margin-left: calc(50vw - 58px - 20px); margin-bottom: 20px;">
-                    <div style="display: inline-block">
-                        <img src="~/images/logo/green/slider_index/mobile/left_arrow.svg" style="margin-top: -9px;"/>
+                <div style="display: inline-block; margin-top: 30px; margin-left: calc(50vw - 28px - 20px); margin-bottom: 20px;">
+                    
+                    <div id="green_reviews_navigation" class="green_slider_navigation" style="display: inline-block">
+                        1 / 5
                     </div>
-                    <div class="green_slider_navigation" style="display: inline-block">
-                        1 / 6
-                    </div>
-                    <div style="display: inline-block">
-                        <img src="~/images/logo/green/slider_index/mobile/right_arrow.svg" />
-                    </div>
+                    
                 </div>
             </div>
 
@@ -210,26 +206,26 @@
     window.prev_index_small = 0;
     window.prev_index_big = 0;
 
-    var slideIndex_small = 0;
-    var slideIndex_big = 0;
+    window.slideIndex_small = 0;
+    window.slideIndex_big = 0;
 
-    showDivs_small(slideIndex_small);
-    showDivs_big(slideIndex_big);
+    showDivs_small(window.slideIndex_small);
+    showDivs_big(window.slideIndex_big);
 
     function plusDivs_small(n) {
-        showDivs_small(slideIndex_small += n);
+        showDivs_small(window.slideIndex_small += n);
     }
 
     function plusDivs_big(n) {
-        showDivs_big(slideIndex_big += n);
+        showDivs_big(window.slideIndex_big += n);
     }
 
     function currentDiv_small(n) {
-        showDivs_small(slideIndex_small = n);
+        showDivs_small(window.slideIndex_small = n);
     }
 
     function currentDiv_big(n) {
-        showDivs_big(slideIndex_big = n);
+        showDivs_big(window.slideIndex_big = n);
     }
 
     function Show_Next_Slide_small(x, slideIndex_small) {
@@ -248,31 +244,48 @@
 
     function showDivs_small(n) {
         var x = document.getElementsByClassName("mySlides_small");
-        if (n == x.length) { slideIndex_small = 0 }
+        if (n == x.length) { window.slideIndex_small = 0 }
 
         x[window.prev_index_small].className = "mySlides_small mySlides hidden_slide";
-        x[slideIndex_small].className = "mySlides_small mySlides visible_slide";
-        setTimeout(Show_Next_Slide_small, 500, x, slideIndex_small);
+        x[window.slideIndex_small].className = "mySlides_small mySlides visible_slide";
+        setTimeout(Show_Next_Slide_small, 500, x, window.slideIndex_small);
     }
 
     function showDivs_big(n) {
         var x = document.getElementsByClassName("mySlides_big");
-        if (n == x.length) { slideIndex_big = 0 }
+        if (n == x.length) { window.slideIndex_big = 0 }
 
         x[window.prev_index_big].className = "mySlides_big mySlides hidden_slide";
-        x[slideIndex_big].className = "mySlides_big mySlides visible_slide";
-        setTimeout(Show_Next_Slide_big, 500, x, slideIndex_big);
+        x[window.slideIndex_big].className = "mySlides_big mySlides visible_slide";
+        setTimeout(Show_Next_Slide_big, 500, x, window.slideIndex_big);
     }
 
-    function pollFunc(fn) {
-        (function p() {
-            fn(1);
-            setTimeout(p, 10000);
-        })();
+</script>
+
+<script>
+    function get_count_of_reviews() {
+        window.count_of_reviews = (document.getElementsByClassName("mySlides_small")).length;
     }
 
-    window.onload = function () {
-        setTimeout(pollFunc, 10000, plusDivs_small);
-        setTimeout(pollFunc, 10000, plusDivs_big);
+    function print_count_of_reviews_in_navigation() {
+        var nav = document.getElementById("green_reviews_navigation");
+        nav.innerHTML = "1" + " / " + window.count_of_reviews;
     }
+
+    window.onload = function() {
+        get_count_of_reviews();
+        print_count_of_reviews_in_navigation();
+    };
+
+    function show_index_small() {
+        var nav = document.getElementById("green_reviews_navigation");
+        nav.innerHTML = (window.slideIndex_small+1) + " / " + window.count_of_reviews;
+    }
+
+    function increment_review() {
+        plusDivs_small(1);
+        show_index_small();
+    }
+
+     
 </script>
