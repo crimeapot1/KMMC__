@@ -219,4 +219,11 @@
     line-height: 130%;
 
     color: #587D5F;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer {
+    margin-top: 0px;
 }
