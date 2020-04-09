@@ -153,8 +153,8 @@
     window.cur_index = 5;
     window.scroller_ready = 1;
 
-    function Shift_Left_Scroller() {
-        if (window.scroller_ready == 1) {
+    function Shift_Left_Scroller() {            // Сдвиг скроллера на одну позицию влево
+        if (window.scroller_ready == 1) {       // Если флаг готовности скроллера true, т.е. на самом деле 1
             var leftPos = $('#list_of_doctors').scrollLeft();
             $("#list_of_doctors").animate({ scrollLeft: leftPos - 350 - 12.5 }, 800);
             window.scroller_ready = 0;
@@ -169,8 +169,8 @@
         }
     }
 
-    function Shift_Right_Scroller() {     // Сдвинуть скроллер 
-        if (window.scroller_ready == 1) {
+    function Shift_Right_Scroller() {     // Сдвиг скроллера на одну позицию вправо
+        if (window.scroller_ready == 1) {       // Если флаг готовности скроллера true, т.е. на самом деле 1
             var leftPos = $('#list_of_doctors').scrollLeft();
             $("#list_of_doctors").animate({ scrollLeft: leftPos + 350 + 12.5 }, 800);
             window.scroller_ready = 0;
@@ -184,8 +184,6 @@
     }
 
     function Refresh_Index_Of_Scroller() {
-        window.number_of_doctors = 8;   // количество врачей на странице (получить через (GetElementsbyClassName).length)
-
         var leftPos = $('#list_of_doctors').scrollLeft();
         var width = $('#list_of_doctors').offsetWidth;
         var rightPos = leftPos + width;
@@ -209,6 +207,9 @@
     }
 
     window.onload = function () {
+        window.number_of_doctors = (document.getElementsByClassName("child")).length;   // количество врачей на странице
+
+
         setInterval(Refresh_Index_Of_Scroller(), 100); // через каждые 0.1 секунды обновляется индекс (указатель положения) скроллера
     };
 </script>
