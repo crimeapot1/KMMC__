@@ -106,6 +106,16 @@
     color: #2A2A2A;
 }
 
+.title_16_20_mobile {
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc(16px + (100vw - 320px) * (20 - 16) / (768 - 320));
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #2A2A2A;
+}
+
 .text_16 {
     font-family: LatoWeb;
     font-style: normal;

@@ -91,7 +91,7 @@
 
                     </div>
 
-                    <button class="green_button button">
+                    <button class="green_button button" id="open_modal_for_making_a_review_button_mobile">
                         Оставить отзыв
                     </button>
 
@@ -102,11 +102,11 @@
                 </div>
 
                 <div style="display: inline-block; margin-top: 30px; margin-left: calc(50vw - 28px - 20px); margin-bottom: 20px;">
-                    
+
                     <div id="green_reviews_navigation" class="green_slider_navigation" style="display: inline-block">
                         1 / 5
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -124,7 +124,7 @@
                 </div>
 
                 <div id="content" class="content" style="height: auto; overflow: hidden;">
-                    
+
                     <div>
                         <a href="https://www.youtube.com/channel/UC7TV11zzSShPGlERh0NWsrA" class="to_learn_more_caption">
                             Перейти на наш youtube канал &rarr;
@@ -186,7 +186,7 @@
 
                 </div>
 
-                <button class="white_button button" style="background-color: #7AABA2;">
+                <button class="white_button button" style="background-color: #7AABA2;" id="open_modal_for_making_a_review_button">
                     Оставить отзыв
                 </button>
 
@@ -199,6 +199,59 @@
         </div>
     </div>
 </div>
+
+<!-- The Modal -->
+<div id="making_a_review_Modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div id="modal_for_making_a_review_close_btn" class="close_btn" style="color: black;">&times;</div>
+        <p class="h1_modal">ЗАПИСАТЬСЯ НА ПРИЕМ</p>
+        <p class="h2_modal">ЗАПОЛНИТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ</p>
+        <input type="text" placeholder="Город вашего проживания*" required class="input_modal" />
+        <input type="text" placeholder="Ваш возраст*" required class="input_modal" />
+
+        <textarea id="making_a_review_Modal_text" rows="4" style="width: 100%;" class="input_modal"> 
+        </textarea>
+
+        <br>
+        <input type="button" id="send_review_form" value="ОТПРАВИТЬ" class="making_an_appointment_button_accept" />
+    </div>
+</div>
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("making_a_review_Modal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("open_modal_for_making_a_review_button");
+    var btn_mobile = document.getElementById("open_modal_for_making_a_review_button_mobile");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementById("modal_for_making_a_review_close_btn");
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    btn_mobile.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 
 
 
@@ -272,20 +325,18 @@
         nav.innerHTML = "1" + " / " + window.count_of_reviews;
     }
 
-    window.onload = function() {
+    window.onload = function () {
         get_count_of_reviews();
         print_count_of_reviews_in_navigation();
     };
 
     function show_index_small() {
         var nav = document.getElementById("green_reviews_navigation");
-        nav.innerHTML = (window.slideIndex_small+1) + " / " + window.count_of_reviews;
+        nav.innerHTML = (window.slideIndex_small + 1) + " / " + window.count_of_reviews;
     }
 
     function increment_review() {
         plusDivs_small(1);
         show_index_small();
     }
-
-     
 </script>
