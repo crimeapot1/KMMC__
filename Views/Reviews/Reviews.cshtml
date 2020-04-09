@@ -95,7 +95,7 @@
                         Оставить отзыв
                     </button>
 
-                    <button class="white_button button" onclick="increment_review();">
+                    <button class="white_button button" onclick="increment_review_small();">
                         Следующий отзыв
                     </button>
 
@@ -104,7 +104,7 @@
                 <div style="display: inline-block; margin-top: 30px; margin-left: calc(50vw - 28px - 20px); margin-bottom: 20px;">
 
                     <div id="green_reviews_navigation" class="green_slider_navigation" style="display: inline-block">
-                        1 / 5
+                        1 / 6
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@
                 <div id="content" class="content" style="height: auto; overflow: hidden;">
 
                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                    <div class="elfsight-app-1161ea89-6dbc-4dd9-b6b6-19c77d09da42"></div>
+                    <div class="elfsight-app-1161ea89-6dbc-4dd9-b6b6-19c77d09da42" style="float: right;"></div>
 
                     <div>
                         <a href="https://www.youtube.com/channel/UC7TV11zzSShPGlERh0NWsrA" class="to_learn_more_caption">
@@ -144,8 +144,8 @@
             <div id="list_of_reviews">
 
                 <div align="right">
-                    <div id="index_navigation_doctors" class="navigation_indexes" style="display: inline-block;">
-                        5 / 8
+                    <div id="white_reviews_navigation" class="navigation_indexes" style="display: inline-block">
+                        1 / 6
                     </div>
                 </div>
 
@@ -187,13 +187,16 @@
 
                 </div>
 
-                <button class="white_button button" style="background-color: #7AABA2;" id="open_modal_for_making_a_review_button">
-                    Оставить отзыв
-                </button>
+                <div>
+                    <button class="white_button button" style="background-color: #7AABA2;" id="open_modal_for_making_a_review_button">
+                        Оставить отзыв
+                    </button>
 
-                <button class="green_button button" style="background-color: white;">
-                    Следующий отзыв
-                </button>
+                    <button class="green_button button" style="background-color: white;" onclick="increment_review_big();">
+                        Следующий отзыв
+                    </button>
+                </div>
+                
 
             </div>
 
@@ -324,6 +327,9 @@
     function print_count_of_reviews_in_navigation() {
         var nav = document.getElementById("green_reviews_navigation");
         nav.innerHTML = "1" + " / " + window.count_of_reviews;
+
+        nav = document.getElementById("white_reviews_navigation");
+        nav.innerHTML = "1" + " / " + window.count_of_reviews;
     }
 
     window.onload = function () {
@@ -336,8 +342,18 @@
         nav.innerHTML = (window.slideIndex_small + 1) + " / " + window.count_of_reviews;
     }
 
-    function increment_review() {
+    function show_index_big() {
+        var nav = document.getElementById("white_reviews_navigation");
+        nav.innerHTML = (window.slideIndex_big + 1) + " / " + window.count_of_reviews;
+    }
+
+    function increment_review_small() {
         plusDivs_small(1);
         show_index_small();
+    }
+
+    function increment_review_big() {
+        plusDivs_big(1);
+        show_index_big();
     }
 </script>
