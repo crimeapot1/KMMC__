@@ -13,7 +13,6 @@
     overflow: -moz-scrollbars-none;
 }
 
-
 .parent {
     overflow: auto;
     overflow-x: scroll;
@@ -44,72 +43,4 @@
     .not_first {
         margin-left: calc(19px + (100vw - 1440px) * 6 / 480);
     }
-}
-
-.doctors_select {
-    font-family: LatoWeb;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
-    background: #77957D;
-    color: #FFFFFF;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid #FFFFFF;
-    width: 383px;
-
-    margin-right: 140px;
-}
-
-@media (min-width: 1440px) {
-    .doctors_select {
-        width: calc(323px + (100vw - 1440px) * (383 - 323) / 480);
-    }
-}
-
-@media (min-width: 1440px) {
-    .doctors_select {
-        margin-right: calc(63px + (100vw - 1440px) * (140 - 63) / 480);
-    }
-}
-
-.alphabet {
-font-family: LatoWeb;
-    font-style: normal;
-    font-weight: bold;
-
-    line-height: 130%;
-    text-transform: uppercase;
-    color: #2A2A2A;
-    display: inline-block;
-}
-
-@media (min-width: 1440px) {
-    .alphabet {
-        margin-left: calc(73px + (100vw - 1440px) * (95-73) / 480);
-        font-size: calc(14px + (100vw - 1440px) * (18-14) / 480);
-    }
-}
-
-@media (min-width: 1920px) {
-    .alphabet {
-        font-size: 18px;
-    }
-}
-
-.char {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    padding-top: 4px;
-}
-
-.char:hover {
-    background: #587D5F;
-    border-radius: 15px;
-    
-    color: white;
 }
