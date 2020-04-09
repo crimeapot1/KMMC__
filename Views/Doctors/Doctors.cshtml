@@ -24,11 +24,11 @@
 
         <div class="navigation_on_doctors_page" style="display: inline-block; float: right;">
             
-            <button style="background: transparent; border: 0px;" onclick="Shift_Left_Slider()"> <img src="~/images/logo/Doctors/left_arrow.svg" style="display: inline-block; margin-right: 20px; margin-top: -12px;" /> </button>
+            <button style="background: transparent; border: 0px;" onclick="Shift_Left_Scroller()"> <img src="~/images/logo/Doctors/left_arrow.svg" style="display: inline-block; margin-right: 20px; margin-top: -12px;" /> </button>
             <div id="index_navigation_doctors" class="navigation_indexes" style="display: inline-block;">
                 5 / 8
             </div>
-            <button style="background: transparent; border: 0px;" onclick="Shift_Right_Slider()"> <img src="~/images/logo/Doctors/right_arrow.svg" style="display: inline-block; margin-left: 20px;" /> </button>
+            <button style="background: transparent; border: 0px;" onclick="Shift_Right_Scroller()"> <img src="~/images/logo/Doctors/right_arrow.svg" style="display: inline-block; margin-left: 20px;" /> </button>
         </div>
     </div>
 
@@ -151,14 +151,14 @@
 
 <script>
     window.cur_index = 5;
-    window.slider_ready = 1;
+    window.scroller_ready = 1;
 
-    function Shift_Left_Slider() {
-        if (window.slider_ready == 1) {
+    function Shift_Left_Scroller() {
+        if (window.scroller_ready == 1) {
             var leftPos = $('#list_of_doctors').scrollLeft();
             $("#list_of_doctors").animate({ scrollLeft: leftPos - 350 - 12.5 }, 800);
-            window.slider_ready = 0;
-            setTimeout("window.slider_ready = 1;", 900);
+            window.scroller_ready = 0;
+            setTimeout("window.scroller_ready = 1;", 900);
 
             if (leftPos >= 125) {
                 window.cur_index = Math.max(1, window.cur_index - 1);
@@ -168,12 +168,13 @@
             index_div.innerHTML = window.cur_index + " / 8";
         }
     }
-    function Shift_Right_Slider() {
-        if (window.slider_ready == 1) {
+
+    function Shift_Right_Scroller() {     // Сдвинуть скроллер 
+        if (window.scroller_ready == 1) {
             var leftPos = $('#list_of_doctors').scrollLeft();
             $("#list_of_doctors").animate({ scrollLeft: leftPos + 350 + 12.5 }, 800);
-            window.slider_ready = 0;
-            setTimeout("window.slider_ready = 1;", 900);
+            window.scroller_ready = 0;
+            setTimeout("window.scroller_ready = 1;", 900);
 
             window.cur_index = Math.min(8, window.cur_index + 1);
 
@@ -182,8 +183,8 @@
         }
     }
 
-    function Refresh_Index_Of_Slider() {
-        window.number_of_doctors = 8;
+    function Refresh_Index_Of_Scroller() {
+        window.number_of_doctors = 8;   // количество врачей на странице (получить через (GetElementsbyClassName).length)
 
         var leftPos = $('#list_of_doctors').scrollLeft();
         var width = $('#list_of_doctors').offsetWidth;
@@ -208,6 +209,6 @@
     }
 
     window.onload = function () {
-        setInterval(Refresh_Index_Of_Slider(), 100);
+        setInterval(Refresh_Index_Of_Scroller(), 100); // через каждые 0.1 секунды обновляется индекс (указатель положения) скроллера
     };
 </script>
