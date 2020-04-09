@@ -129,7 +129,7 @@
 
 .button {
     float: left;
-    margin-top: -30px;
+    margin-top: -60px;
     width: 250px;
     height: 60px;
     font-family: LatoWeb;
@@ -154,7 +154,7 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
     margin-right: 241px;
     float: right;
-    margin-top: -60px;
+    margin-top: -30px;
 }
 
 .date {
