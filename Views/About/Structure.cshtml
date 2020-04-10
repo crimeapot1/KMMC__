@@ -18,6 +18,47 @@
     </div>
 </div>
 
+<style>
+    .subtitle {
+        margin-left: 25px; 
+        font-size: 18px;
+    }
+
+    @@media (min-width: 1440px) {
+        .subtitle {
+            margin-bottom: calc(20px + (100vw - 1440px) * (30 - 20) / (1920 - 1440));
+        }
+    }
+
+
+    @@media (min-width: 1441px) {
+        .subtitle {
+            font-size: calc(18px + (100vw - 1921px) * (20 - 18) / (1920 - 1441));
+        }
+    }
+
+    @@media (min-width: 1921px) {
+        .subtitle {
+            font-size: calc(20px + (100vw - 1921px) * (30 - 20) / (2560 - 1921));
+        }
+    }
+
+    
+    @@media (max-width: 1439px) {
+        .subtitle {
+            padding-left: calc(20px + (100vw - 1440px) * (25 - 20) / (1439 - 769));
+            margin-bottom: 20px;
+        }
+    }
+
+
+    @@media (max-width: 768px) {
+        .subtitle {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
 <div class="main_page_template_table" id="main_page_template_table">
 
     <!-- Мобильная версия -->
@@ -56,7 +97,7 @@
                     </ul>
 
 
-                    <div style="margin-left: 25px; margin-bottom: calc(20px + (100vw - 1440px) * (30 - 20) / (1920 - 1440));">
+                    <div class="subtitle">
                         <b>Центр хирургии</b>
                     </div>
 
@@ -127,7 +168,7 @@
                         </li>
                     </ul>
 
-                    <div style="margin-left: 25px; margin-bottom: calc(20px + (100vw - 1440px) * (30 - 20) / (1920 - 1440));">
+                    <div class="subtitle">
                         <b>Центр хирургии</b>
                     </div>
                     <ul class="list_of_sections">
@@ -168,7 +209,7 @@
         <div class="col-md-6 big_slider_div_text_page text_page_desktop_right_part">
             <div style="margin-top: 1px; max-height: 700px;" align="right">
 
-                <img src="~/images/Content/About/Structure/Structure.jpg" style="width: 97%;" />
+                <img src="~/images/Content/About/Structure/Structure.jpg" style="        width: 97%;" />
 
             </div>
 

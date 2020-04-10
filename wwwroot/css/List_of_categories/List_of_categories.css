@@ -11,9 +11,15 @@
 .list_of_sections_box {
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-
-    
 }
+
+@media (min-width: 769px) {
+    .list_of_sections_box {
+        padding-left: calc(20px + (100vw - 1440px) * (35 - 20) / (1439 - 769));
+        padding-top: calc(20px + (100vw - 1440px) * (35 - 20) / (1439 - 769));
+        padding-bottom: calc(20px + (100vw - 1440px) * (58 - 20) / (1439 - 769));
+    }
+} 
 
 @media (min-width: 1440px) {
     .list_of_sections_box {
@@ -58,6 +64,6 @@ li {
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
