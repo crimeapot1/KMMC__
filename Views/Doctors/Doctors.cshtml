@@ -150,66 +150,70 @@
 </div>
 
 <script>
-    window.cur_index = 5;
-    window.scroller_ready = 1;
+    window.cur_index = 5;                       // Почему 5?
+    window.scroller_ready = 1;                  // Скроллер готов к запросам пользователя.
 
     function Shift_Left_Scroller() {            // Сдвиг скроллера на одну позицию влево
         if (window.scroller_ready == 1) {       // Если флаг готовности скроллера true, т.е. на самом деле 1
-            var leftPos = $('#list_of_doctors').scrollLeft();
-            $("#list_of_doctors").animate({ scrollLeft: leftPos - 350 - 12.5 }, 800);
-            window.scroller_ready = 0;
-            setTimeout("window.scroller_ready = 1;", 900);
+            var leftPos = $('#list_of_doctors').scrollLeft();       // Получаем координату левого конца скроллера
+            $("#list_of_doctors").animate({ scrollLeft: leftPos - 350 - 12.5 }, 800);      // Анимация скроллинга длительностью 0.8 секунды
+            window.scroller_ready = 0;          // Скроллер занят - не готов к другим движениям, потенциально запрашиваемых пользователями.
+            setTimeout("window.scroller_ready = 1;", 900);      // Через 0.9 секунды скроллер освободится и будет готов к новым запросам от пользователя.
 
-            if (leftPos >= 125) {
-                window.cur_index = Math.max(1, window.cur_index - 1);
+            if (leftPos >= 125) {               // Если позиция левого конца скроллера >= 125px, то ...
+                window.cur_index = Math.max(1, window.cur_index - 1);           // текущий индекс скроллера вычисляется как максимум (1, текущий индекс-(минус)1)
             }
 
-            var index_div = document.getElementById("index_navigation_doctors");
-            index_div.innerHTML = window.cur_index + " / 8";
+            Show_Scroller_Index();      // Отображаем текущий индекс скроллера в блоке навигации.
         }
     }
 
     function Shift_Right_Scroller() {     // Сдвиг скроллера на одну позицию вправо
         if (window.scroller_ready == 1) {       // Если флаг готовности скроллера true, т.е. на самом деле 1
-            var leftPos = $('#list_of_doctors').scrollLeft();
-            $("#list_of_doctors").animate({ scrollLeft: leftPos + 350 + 12.5 }, 800);
-            window.scroller_ready = 0;
-            setTimeout("window.scroller_ready = 1;", 900);
+            var leftPos = $('#list_of_doctors').scrollLeft();               // Получаем координату левого конца скроллера
+            $("#list_of_doctors").animate({ scrollLeft: leftPos + 350 + 12.5 }, 800);            // Анимация скроллинга длительностью 0.8 секунды
+            window.scroller_ready = 0;              // Скроллер занят - не готов к другим движениям, потенциально запрашиваемых пользователями.
+            setTimeout("window.scroller_ready = 1;", 900);          // Через 0.9 секунды скроллер освободится и будет готов к новым запросам от пользователя.
 
-            window.cur_index = Math.min(8, window.cur_index + 1);
+            window.cur_index = Math.min(window.number_of_doctors, window.cur_index + 1);        //  // текущий индекс скроллера вычисляется как минимум (кол-во_объектов_в_div-блоке, текущий_индекс+1)
 
-            var index_div = document.getElementById("index_navigation_doctors");
-            index_div.innerHTML = window.cur_index + " / 8";
+            Show_Scroller_Index();      // Отображаем текущий индекс скроллера в блоке навигации.
         }
     }
 
-    function Refresh_Index_Of_Scroller() {
-        var leftPos = $('#list_of_doctors').scrollLeft();
-        var width = $('#list_of_doctors').offsetWidth;
-        var rightPos = leftPos + width;
+    function Refresh_Index_Of_Scroller() {          // Процедура обновления индекса скроллера (скроллер - это видимая часть div-блока, следовательно скроллер имеет координаты левого и правого края)
+        var leftPos = $('#list_of_doctors').scrollLeft();       // Получаем координату левого края
+        var width = $('#list_of_doctors').offsetWidth;          // Получаем ширину скроллера
+        var rightPos = leftPos + width;                         // Вычисляем координату правого конца как (координата левого конца + ширина скроллера)
 
-        var margin = (19 + (document.documentElement.clientWidth - 1440) * 6 / 480);
+        var margin = (19 + (document.documentElement.clientWidth - 1440) * 6 / 480);    // Отступ (действительно, margin) между объектами (врачами) внутри div-блока.
 
-        var index = 0;
+        var index = 0;              // Индекс скроллера
 
-        for (var i = 1; i <= window.number_of_doctors; i++) {
-            if (rightPos - 350 - margin > 0) {
-                rightPos = rightPos - (350 + margin);
-                index++;
+
+        // Вычисляем текущий инлекс скроллера по координатам
+        for (var i = 1; i <= window.number_of_doctors; i++) {       // Проходим по циклу по количеству объектов (врачей) в div-блоке
+            if (rightPos - 350 - margin > 0) {                      // Если координата правого конца скроллера -(минус) ширина одного элемента (одного врача) в div-блоке -(минус) отступ < 0, то ... 
+                rightPos = rightPos - (350 + margin);               // Вычитаем из правой координаты (т.е. из резерва) 
+                index++;                                            // Инкремент индекса
             }
-            else break;
+            else break;                                             // Иначе резерв закончен - выходим из цикла (индекс (позиция) вычислен).
         }
 
-        window.cur_index = index;
+        window.cur_index = index;           // Текущий индекс скроллера - теперь глобальная переменная
 
-        var index_div = document.getElementById("index_navigation_doctors");
-        index_div.innerHTML = window.cur_index + " / 8";
+        Show_Scroller_Index();      // Отображаем текущий индекс скроллера в блоке навигации.
     }
+
+    // Отображаем текущий индекс скроллера в блоке навигации.
+    function Show_Scroller_Index() {
+        var index_div = document.getElementById("index_navigation_doctors");                // Находим объект (блок навигации) по id
+        index_div.innerHTML = window.cur_index + " / " + window.number_of_doctors;          // Обновляем содержимое обекта (div-блока).
+    }
+    /* ------------------------------------------------------------ */
 
     window.onload = function () {
         window.number_of_doctors = (document.getElementsByClassName("child")).length;   // количество врачей на странице
-
-
         setInterval(Refresh_Index_Of_Scroller(), 100); // через каждые 0.1 секунды обновляется индекс (указатель положения) скроллера
     };
 </script>

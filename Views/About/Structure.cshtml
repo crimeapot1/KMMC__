@@ -4,21 +4,8 @@
 
 <link rel="stylesheet" href="~/css/Docs/docs.css" />
 <link rel="stylesheet" href="~/css/Text_Page/Text_Page.css" />
-
-<style>
-    .inside_content {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 150%;
-
-    text-decoration-line: underline;
-    text-transform: uppercase;
-
-    color: #000000;
-}
-</style>
+<link rel="stylesheet" href="~/css/green_ul_li/green_ul_li.css" />
+<link rel="stylesheet" href="~/css/List_of_categories/List_of_categories.css" />
 
 <div id="submenu" class="submenu">
     <a asp-area="" asp-controller="Home" asp-action="Index">
@@ -43,46 +30,61 @@
             </div>
 
             <div id="content_mobile" class="content_mobile">
-                <div id="content_mobile" class="content_mobile">
-                    <div class="treatment_title">
-                        Структура Центра
+
+                <p class="content_title">
+                    Структура Центра
+                </p>
+
+                <div class="list_of_sections_box_mobile">
+                    <div style="margin-left: 25px;">
+                        <b>Центр хирургии</b>
                     </div>
 
-                    <div class="inside_content">
-                        Центр хирургии
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Surgery">
-                            -отделение Хирургии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Urology">
-                            -отделение урологии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Anesthesiology_And_Intensive_Care">
-                            -отделение Анестезиологии и реанимации
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Traumatology_and_Orthopedics">
-                            -отделение Травматологии и ортопедии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Operation_Unit">
-                            -Операционный Блок
-                        </a>
-                        <br> <br>
-                        <a asp-area="" asp-controller="About" asp-action="Clinic">
-                            Поликлиника
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Radiation_Diagnostics">
-                            -отделение Лучевой Диагностики
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Department_of_Laboratory_Research">
-                            -Отделение лабораторных исследований
-                        </a>
-                    </div>
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Surgery">
+                                Отделение хирургии
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Urology">
+                                Отделение урологии
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Anesthesiology_And_Intensive_Care">
+                                Отделение анестезиологии и реанимации
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Traumatology_and_Orthopedics">
+                                Отделение травматологии и ортопедии
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Operation_Unit">
+                                Операционный блок
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Clinic">
+                                Поликлиника
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Radiation_Diagnostics">
+                                Отделение лучевой диагностики
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Department_of_Laboratory_Research">
+                                Отделение лабораторных исследований
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -92,61 +94,76 @@
     <!-- Десктопная версия -->
 
     <div class="row justify-content-md-center big_text_div_text_page">
+
         <div class="col-md-6 text_page_desktop_left_part">
 
             <div id="content" class="content">
-                <div id="content_mobile" class="content_mobile">
-                    <div class="treatment_title">
-                        Структура Центра
-                    </div>
 
-                    <div class="inside_content">
-                        Центр хирургии
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Surgery">
-                            -отделение Хирургии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Urology">
-                            -отделение урологии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Anesthesiology_And_Intensive_Care">
-                            -отделение Анестезиологии и реанимации
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Traumatology_and_Orthopedics">
-                            -отделение Травматологии и ортопедии
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Operation_Unit">
-                            -Операционный Блок
-                        </a>
-                        <br> <br>
-                        <a asp-area="" asp-controller="About" asp-action="Clinic">
-                            Поликлиника
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Radiation_Diagnostics">
-                            -отделение Лучевой Диагностики
-                        </a>
-                        <br>
-                        <a asp-area="" asp-controller="About" asp-action="Department_of_Laboratory_Research">
-                            -Отделение лабораторных исследований
-                        </a>
+                <p class="content_title">
+                    Структура Центра
+                </p>
+
+                <div class="list_of_sections_box">
+                    <div style="margin-left: 25px;">
+                        <b>Центр хирургии</b>
                     </div>
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Surgery">
+                                Отделение хирургии
+                            </a>
+                        </li>
+
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Urology">
+                                Отделение урологии
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Anesthesiology_And_Intensive_Care">
+                                Отделение анестезиологии и реанимации
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Traumatology_and_Orthopedics">
+                                Отделение травматологии и ортопедии
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Operation_Unit">
+                                Операционный блок
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list_of_sections">
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Clinic">
+                                Поликлиника
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Radiation_Diagnostics">
+                                Отделение лучевой диагностики
+                            </a>
+                        </li>
+                        <li class="green_mark">
+                            <a asp-area="" asp-controller="About" asp-action="Department_of_Laboratory_Research">
+                                Отделение лабораторных исследований
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
-
-
         </div>
+
         <div class="col-md-6 big_slider_div_text_page text_page_desktop_right_part">
-            <div style="margin-top: 1px; max-height: 700px;" align="center">
+            <div style="margin-top: 1px; max-height: 700px;" align="right">
 
                 <img src="~/images/Content/About/Structure/Structure.jpg" style="width: 97%;" />
 
             </div>
-            <br>
 
         </div>
     </div>
