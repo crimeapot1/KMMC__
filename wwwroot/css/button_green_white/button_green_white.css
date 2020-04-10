@@ -1,0 +1,12 @@
+﻿.button {
+    float: left;
+    margin-top: -30px;
+    height: 60px;
+    font-family: LatoWeb;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    float: right;
+}

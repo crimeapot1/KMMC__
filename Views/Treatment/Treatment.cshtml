@@ -8,23 +8,14 @@
 <link rel="stylesheet" href="~/css/schedule/schedule.css" />
 <link rel="stylesheet" href="~/css/right_part_content_flush_background_rect/right_part_content_flush_background_rect.css" />
 
+<link rel="stylesheet" href="~/css/button_green_white/button_green_white.css" />
+
 <style>
     .green_links {
         text-align: left;
     }
 
-    .button {
-        float: left;
-        margin-top: -30px;
-        height: 60px;
-        font-family: LatoWeb;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        border: none;
-        float: right;
-    }
+    
 
     .green_button {
         background: #7AABA2;
@@ -184,9 +175,9 @@
                 </div>
 
                 <div>
-                    <button class="green_button button">
+                    <a asp-area="" asp-controller="ForPatients" asp-action="Paid_Services" class="green_button button">
                         Узнать стоимость
-                    </button>
+                    </a>
 
                     <button class="white_button button">
                         Консультация врача
@@ -324,7 +315,7 @@ flex: 0 0 58%;">
                 </div>
 
 
-                <button class="green_button button">
+                <button asp-area="" asp-controller="ForPatients" asp-action="Paid_Services" class="green_button button">
                     Узнать стоимость
                 </button>
                 <button class="white_button button">
